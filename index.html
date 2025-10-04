@@ -21,7 +21,8 @@
             --gradient-primary: linear-gradient(135deg, #E348A1 0%, #ff6b9c 100%);
             --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             --gradient-light: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            --gradient-hero: linear-gradient(135deg, rgba(26,26,46,0.9) 0%, rgba(22,33,62,0.9) 100%);
+            --gradient-hero: linear-gradient(135deg, #8A2387 0%, #E94057 50%, #F27121 100%);
+            --gradient-subtle: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
         * {
@@ -34,7 +35,7 @@
         body {
             color: var(--secondary-color);
             line-height: 1.7;
-            background: var(--gradient-light);
+            background: var(--white);
             overflow-x: hidden;
             font-weight: 400;
         }
@@ -59,7 +60,7 @@
         }
         
         .hero-section {
-            background: var(--gradient-hero), url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background: var(--gradient-hero);
             color: var(--white);
             padding: 150px 0;
             text-align: center;
@@ -74,8 +75,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 80%, rgba(227, 72, 161, 0.2) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 20%, rgba(255, 107, 156, 0.15) 0%, transparent 50%);
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(138, 35, 135, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(242, 113, 33, 0.2) 0%, transparent 50%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
             z-index: 1;
         }
         
@@ -92,11 +95,17 @@
             background-color: var(--light-bg);
             background-image: 
                 radial-gradient(circle at 5% 15%, rgba(227, 72, 161, 0.03) 0%, transparent 25%),
-                radial-gradient(circle at 95% 85%, rgba(227, 72, 161, 0.03) 0%, transparent 25%);
+                radial-gradient(circle at 95% 85%, rgba(227, 72, 161, 0.03) 0%, transparent 25%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g fill="none" fill-rule="evenodd"><g fill="%23E348A1" fill-opacity="0.03"><path d="M36,34 L36,56 L34,56 L34,34 L36,34 Z M26,34 L26,56 L24,56 L24,34 L26,34 Z M16,34 L16,56 L14,56 L14,34 L16,34 Z M6,34 L6,56 L4,56 L4,34 L6,34 Z M46,34 L46,56 L44,56 L44,34 L46,34 Z M56,34 L56,56 L54,56 L54,34 L56,34 Z"/></g></g></svg>');
         }
         
         .bg-accent {
             background: var(--gradient-primary);
+            color: var(--white);
+        }
+        
+        .bg-subtle {
+            background: var(--gradient-subtle);
             color: var(--white);
         }
         
@@ -762,7 +771,7 @@
 </head>
 <body>
     <!-- Seção Hero -->
-    <section class="hero-section parallax">
+    <section class="hero-section">
         <div class="container">
             <div class="hero-content">
                 <h1 class="fade-in">DOMINE A ARTE DA <span class="highlight">MICROPIGMENTAÇÃO PERFEITA</span></h1>
@@ -861,7 +870,7 @@
     </section>
     
     <!-- Seção Bônus -->
-    <section class="bg-pattern">
+    <section class="bg-subtle">
         <div class="container bonus-section">
             <div class="section-header">
                 <h2 class="section-title fade-in">BÔNUS EXCLUSIVOS PARA SUA JORNADA</h2>
@@ -910,11 +919,11 @@
     </section>
     
     <!-- Seção Depoimentos -->
-    <section class="parallax" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');">
+    <section class="bg-pattern">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title fade-in" style="color: white;">HISTÓRIAS DE SUCESSO</h2>
-                <p class="section-subtitle fade-in delay-1" style="color: rgba(255,255,255,0.8);">Veja o que nossas alunas estão conquistando</p>
+                <h2 class="section-title fade-in">HISTÓRIAS DE SUCESSO</h2>
+                <p class="section-subtitle fade-in delay-1">Veja o que nossas alunas estão conquistando</p>
             </div>
             <div class="testimonial-grid">
                 <div class="fade-in"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-4.jpg" alt="Depoimento" class="testimonial-img"></div>
@@ -1050,7 +1059,7 @@
             <div class="footer-links">
                 <a href="https://micropigmentacaodesobrancelha.com/politicas-de-privacidade/">Políticas de Privacidade</a>
                 <a href="https://micropigmentacaodesobrancelha.com/termos-e-condicoes/">Termos de Uso</a>
-                <a href="mailto:suporte@curso micropigmentacao.com">Fale Conosco</a>
+                <a href="mailto:suporte@cursomicropigmentacao.com">Fale Conosco</a>
             </div>
             <div class="copyright">
                 <p>Copyright © 2025 - <b>Curso Micropigmentação Perfeita</b> - CNPJ: 52.832.200/0001-04 - Todos os Direitos Reservados.</p>
