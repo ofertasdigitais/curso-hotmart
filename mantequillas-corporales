@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Mantequillas Corporales - Oferta Especial</title>
+  <meta name="description" content="Aprenda técnicas profissionais com o curso completo de Mantequillas Corporales. Aproveite a oferta exclusiva!">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      position: relative;
+    }
+
+    .banner {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #c2185b;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    a.cta-button {
+      display: inline-block;
+      padding: 14px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: #c2185b;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    a.cta-button:hover {
+      background: #9c1348;
+      transform: translateY(-2px);
+    }
+
+    .note {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Banner do curso -->
+    <img class="banner" src="https://i.ytimg.com/vi/KM7hpYpzeHA/maxresdefault.jpg" alt="Curso de Mantequillas Corporales">
+
+    <h1>Curso Completo de Mantequillas Corporales</h1>
+    <p>Aprenda todas as técnicas passo a passo e garanta resultados profissionais. Vagas limitadas!</p>
+
+    <a class="cta-button" href="https://go.hotmart.com/T102150493U" id="cta-link">
+      Ir para a Oferta Agora
+    </a>
+
+    <p class="note">Você será redirecionado automaticamente em alguns segundos.</p>
+  </div>
+
+  <script>
+    // Redirecionamento automático após 2 segundos
+    setTimeout(() => {
+      window.location.href = "https://go.hotmart.com/T102150493U";
+    }, 2000);
+  </script>
+
+</body>
+</html>
