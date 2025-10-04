@@ -7,7 +7,6 @@
   <meta name="description" content="Curso completo de Micropigmentação. Aproveite a oferta exclusiva e garanta sua vaga!">
 
   <style>
-    /* Fundo e centralização */
     body {
       margin: 0;
       padding: 0;
@@ -21,7 +20,6 @@
       overflow: hidden;
     }
 
-    /* Loader */
     .loader {
       border: 6px solid #f3f3f3;
       border-top: 6px solid #c2185b;
@@ -38,7 +36,7 @@
     }
 
     .container {
-      display: none; /* Escondido até o preload terminar */
+      display: none;
       background: rgba(0,0,0,0.75);
       border-radius: 12px;
       max-width: 650px;
@@ -128,7 +126,7 @@
   <div class="loader"></div>
 
   <div class="container">
-    <img class="banner" src="https://i.ibb.co/5TnCmZb/banner-curso.jpg" alt="Curso de Micropigmentação">
+    <img class="banner" src="https://i.ytimg.com/vi/KM7hpYpzeHA/maxresdefault.jpg" alt="Curso de Micropigmentação">
     <h1>Oferta Exclusiva do Curso de Micropigmentação</h1>
     <p>Garanta sua vaga agora e aproveite a oportunidade de aprender micropigmentação com um método completo e profissional.</p>
 
@@ -149,12 +147,10 @@
   </div>
 
   <script>
-    // Preload do fundo e banner
     const background = new Image();
-    background.src = 'https://i.ibb.co/Jxq7cYs/bg-curso.jpg';
+    background.src = 'https://i.ytimg.com/vi/KM7hpYpzeHA/maxresdefault.jpg';
 
     const banner = document.querySelector('.banner');
-
     const preloadImages = [background, banner];
 
     let loadedCount = 0;
@@ -171,7 +167,6 @@
         document.querySelector('.loader').style.display = 'none';
         document.querySelector('.container').style.display = 'block';
 
-        // Redirecionamento após 2 segundos de exibição
         setTimeout(() => {
           window.location.href = 'https://go.hotmart.com/E102198663T?utm_source=google&utm_medium=cpc&utm_campaign=micropigmentacao&utm_term={keyword}&utm_content={creative}';
         }, 2000);
