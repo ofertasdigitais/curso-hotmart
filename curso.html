@@ -6,34 +6,49 @@
   <title>Curso de Micropigmentação - Oferta Exclusiva</title>
   <meta name="description" content="Curso completo de Micropigmentação. Aproveite a oferta exclusiva e garanta sua vaga!">
 
-  <!-- Redirecionamento Hotmart em 2 segundos -->
-  <meta http-equiv="refresh" content="2; URL='https://go.hotmart.com/E102198663T?utm_source=google&utm_medium=cpc&utm_campaign=micropigmentacao&utm_term={keyword}&utm_content={creative}'">
-
   <style>
-    /* Fundo com wallpaper confiável */
+    /* Fundo e centralização */
     body {
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background: url('https://i.ibb.co/Jxq7cYs/bg-curso.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: #000;
       color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Loader */
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #c2185b;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 25px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     .container {
+      display: none; /* Escondido até o preload terminar */
       background: rgba(0,0,0,0.75);
       border-radius: 12px;
       max-width: 650px;
       padding: 40px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.6);
       text-align: center;
+      z-index: 10;
+      position: relative;
     }
 
-    /* Banner do curso */
     .banner {
       width: 100%;
       max-height: 220px;
@@ -54,7 +69,6 @@
       line-height: 1.4;
     }
 
-    /* Lista de benefícios */
     .features {
       text-align: left;
       margin: 20px 0;
@@ -66,21 +80,6 @@
 
     .features li::before {
       content: "✅ ";
-    }
-
-    .loader {
-      border: 6px solid #f3f3f3;
-      border-top: 6px solid #c2185b;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
-      margin: 25px auto;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
     }
 
     a.cta-button {
@@ -107,7 +106,6 @@
       color: #ddd;
     }
 
-    /* Responsividade */
     @media (max-width: 700px) {
       .container {
         padding: 25px;
@@ -126,10 +124,11 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Banner confiável -->
-    <img class="banner" src="https://i.ibb.co/5TnCmZb/banner-curso.jpg" alt="Curso de Micropigmentação">
 
+  <div class="loader"></div>
+
+  <div class="container">
+    <img class="banner" src="https://i.ibb.co/5TnCmZb/banner-curso.jpg" alt="Curso de Micropigmentação">
     <h1>Oferta Exclusiva do Curso de Micropigmentação</h1>
     <p>Garanta sua vaga agora e aproveite a oportunidade de aprender micropigmentação com um método completo e profissional.</p>
 
@@ -140,7 +139,6 @@
       <li>Suporte especializado durante o aprendizado</li>
     </ul>
 
-    <div class="loader"></div>
     <p><strong>Aguarde alguns segundos, você será redirecionado...</strong></p>
 
     <a class="cta-button" href="https://go.hotmart.com/E102198663T?utm_source=google&utm_medium=cpc&utm_campaign=micropigmentacao&utm_term={keyword}&utm_content={creative}">
@@ -149,5 +147,37 @@
 
     <p class="note">Vagas limitadas! Garanta sua inscrição antes que acabem.</p>
   </div>
+
+  <script>
+    // Preload do fundo e banner
+    const background = new Image();
+    background.src = 'https://i.ibb.co/Jxq7cYs/bg-curso.jpg';
+
+    const banner = document.querySelector('.banner');
+
+    const preloadImages = [background, banner];
+
+    let loadedCount = 0;
+
+    preloadImages.forEach(img => {
+      if (img.complete) incrementCounter();
+      else img.onload = incrementCounter;
+    });
+
+    function incrementCounter() {
+      loadedCount++;
+      if (loadedCount === preloadImages.length) {
+        document.body.style.backgroundImage = `url('${background.src}')`;
+        document.querySelector('.loader').style.display = 'none';
+        document.querySelector('.container').style.display = 'block';
+
+        // Redirecionamento após 2 segundos de exibição
+        setTimeout(() => {
+          window.location.href = 'https://go.hotmart.com/E102198663T?utm_source=google&utm_medium=cpc&utm_campaign=micropigmentacao&utm_term={keyword}&utm_content={creative}';
+        }, 2000);
+      }
+    }
+  </script>
+
 </body>
 </html>
