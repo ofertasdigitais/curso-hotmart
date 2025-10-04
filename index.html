@@ -3,1074 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso Micropigmentação Perfeita - Jessica Soares</title>
+    <title>Curso de Micropigmentação - Jessica Soares</title>
+    <meta name="description" content="Aprenda micropigmentação do zero com a expert Jessica Soares. Curso completo com certificado e suporte especializado.">
+    <meta name="robots" content="index, follow">
+    <link rel="preload" href="https://studiojessicasoares.com.br/wp-content/uploads/2021/04/logo-jessica-soares.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #E348A1;
-            --primary-dark: #c93a8a;
-            --secondary: #333333;
-            --accent: #FF6B9C;
-            --light: #f9f9f9;
-            --white: #ffffff;
-            --gray: #666666;
-            --gray-light: #f5f5f5;
-            --dark: #1a1a1a;
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
-            --shadow-lg: 0 20px 50px rgba(0,0,0,0.15);
-            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            color: var(--secondary);
-            line-height: 1.7;
-            overflow-x: hidden;
-            background: var(--white);
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        section {
-            padding: 100px 0;
-            position: relative;
-        }
-
-        /* HEADER */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255,255,255,0.98);
-            backdrop-filter: blur(15px);
-            z-index: 1000;
-            padding: 18px 0;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-            transition: var(--transition);
-            border-bottom: 1px solid rgba(227, 72, 161, 0.1);
-        }
-
-        .header.scrolled {
-            padding: 12px 0;
-        }
-
-        .nav-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 45px;
-            transition: var(--transition);
-        }
-
-        .nav-menu {
-            display: flex;
-            gap: 40px;
-        }
-
-        .nav-menu a {
-            text-decoration: none;
-            color: var(--secondary);
-            font-weight: 500;
-            font-size: 1rem;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-menu a:hover {
-            color: var(--primary);
-        }
-
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: var(--transition);
-        }
-
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(135deg, 
-                rgba(227, 72, 161, 0.15) 0%,
-                rgba(255, 107, 156, 0.1) 50%,
-                rgba(255, 255, 255, 0.95) 100%),
-            url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            padding: 180px 0 120px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23E348A1" fill-opacity="0.05"><circle cx="30" cy="30" r="4"/></g></g></svg>');
-        }
-
-        h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        h3 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .highlight {
-            color: var(--primary);
-        }
-
-        /* PROGRESS BAR */
-        .progress-bar {
-            height: 60px;
-            background: #f0f0f0;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: inset 0 4px 15px rgba(0,0,0,0.1);
-            margin: 40px auto;
-            max-width: 600px;
-            position: relative;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
-            width: 92%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .progress-fill::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-            animation: shimmer 2.5s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        /* PRICING */
-        .pricing-box {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 25px;
-            padding: 50px 40px;
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition);
-            max-width: 500px;
-            margin: 0 auto;
-            border: 2px solid rgba(227, 72, 161, 0.1);
-        }
-
-        .pricing-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-        }
-
-        .old-price {
-            color: #ff4444;
-            text-decoration: line-through;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .new-price {
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--primary);
-            margin: 15px 0;
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
-        }
-
-        .installments {
-            color: var(--gray);
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-        }
-
-        /* BUTTONS */
-        .btn-premium {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 22px 50px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.4rem;
-            transition: var(--transition);
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 15px 35px rgba(227, 72, 161, 0.4);
-            position: relative;
-            overflow: hidden;
-            display: inline-block;
-            text-align: center;
-        }
-
-        .btn-premium:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(227, 72, 161, 0.6);
-        }
-
-        .btn-sm {
-            padding: 15px 30px;
-            font-size: 1.1rem;
-        }
-
-        /* CARDS */
-        .glass-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 40px 30px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 2px solid rgba(227, 72, 161, 0.1);
-        }
-
-        .glass-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* GRIDS */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-        }
-
-        /* BACKGROUNDS */
-        .bg-light {
-            background-color: var(--light);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(227, 72, 161, 0.08) 0%, transparent 25%),
-                radial-gradient(circle at 90% 80%, rgba(255, 107, 156, 0.08) 0%, transparent 25%);
-        }
-
-        .bg-pattern {
-            background-color: var(--white);
-            background-image: 
-                radial-gradient(circle at 20% 80%, rgba(227, 72, 161, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 107, 156, 0.05) 0%, transparent 50%);
-        }
-
-        .bg-gradient {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            color: white;
-        }
-
-        .bg-dark {
-            background: linear-gradient(135deg, #2c2c2c 0%, var(--dark) 100%);
-            color: white;
-        }
-
-        /* ANIMATIONS */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .floating {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* TESTIMONIALS */
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-        }
-
-        .testimonial-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .testimonial-img:hover {
-            transform: scale(1.05);
-        }
-
-        /* FAQ */
-        .faq-item {
-            background: var(--white);
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border-left: 4px solid var(--primary);
-            border: 2px solid rgba(227, 72, 161, 0.1);
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            border-left-color: var(--accent);
-        }
-
-        .faq-question {
-            font-weight: 600;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-answer {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid var(--gray-light);
-            display: none;
-        }
-
-        .faq-answer.active {
-            display: block;
-        }
-
-        /* BONUS CARDS */
-        .bonus-card {
-            text-align: center;
-            padding: 40px 25px;
-            background: var(--white);
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            border: 2px solid rgba(227, 72, 161, 0.1);
-        }
-
-        .bonus-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-        }
-
-        .bonus-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        /* SECTION DIVIDERS */
-        .section-divider {
-            height: 100px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            position: relative;
-            margin: -50px 0;
-            transform: skewY(-2deg);
-            z-index: 1;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 1200px) {
-            .testimonial-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 768px) {
-            h1 { font-size: 2.4rem; }
-            h2 { font-size: 2rem; }
-            h3 { font-size: 1.5rem; }
-            
-            .nav-menu { display: none; }
-            .hero { padding: 140px 0 80px; }
-            .new-price { font-size: 3rem; }
-            .btn-premium { padding: 18px 35px; font-size: 1.2rem; }
-            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
-            .testimonial-grid { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 2rem; }
-            h2 { font-size: 1.7rem; }
-            .container { padding: 0 15px; }
-            .pricing-box { padding: 30px 20px; }
-            section { padding: 80px 0; }
-        }
+        :root{--primary:#e348a1;--secondary:#333;--accent:#ff6b9c;--light:#f9f9f9;--white:#fff;--gray:#666;--shadow:0 5px 15px rgba(0,0,0,.1);--transition:all .3s ease}*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif}body{color:var(--secondary);line-height:1.6;overflow-x:hidden}.container{max-width:1200px;margin:0 auto;padding:0 20px}.text-center{text-align:center}section{padding:80px 0}.bg-light{background:var(--light)}.bg-pattern{background:linear-gradient(135deg,#f9f9f9 0%,#fff 100%)}h1,h2,h3{margin-bottom:20px;font-weight:700}h1{font-size:2.8rem}h2{font-size:2.2rem}.highlight{color:var(--primary)}.btn{display:inline-block;background:linear-gradient(135deg,var(--primary),#c93a8a);color:var(--white);padding:18px 35px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1.2rem;transition:var(--transition);border:none;cursor:pointer;box-shadow:0 4px 15px rgba(227,72,161,.3)}.btn:hover{transform:translateY(-3px);box-shadow:0 7px 20px rgba(227,72,161,.4)}.btn-large{padding:22px 50px;font-size:1.5rem}.price-section{text-align:center;margin:40px 0;padding:30px;background:var(--white);border-radius:15px;box-shadow:var(--shadow);max-width:600px;margin-left:auto;margin-right:auto}.old-price{color:var(--accent);text-decoration:line-through;font-size:1.5rem;margin-bottom:10px}.new-price{font-size:3.5rem;font-weight:700;margin:15px 0;color:var(--primary)}.installments{font-size:1.2rem;color:var(--secondary)}.progress-bar{width:100%;height:50px;background:#e0e0e0;border-radius:25px;margin:30px 0;overflow:hidden;box-shadow:inset 0 2px 5px rgba(0,0,0,.1)}.progress-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent));border-radius:25px;display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:1.1rem;position:relative;overflow:hidden}.progress-fill:after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);animation:shimmer 2s infinite}@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}.card{background:var(--white);border-radius:15px;padding:30px;box-shadow:var(--shadow);text-align:center;transition:var(--transition);position:relative;overflow:hidden}.card:before{content:'';position:absolute;top:0;left:0;width:5px;height:100%;background:var(--primary)}.card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.15)}.icon-list{list-style:none}.icon-list li{margin-bottom:15px;display:flex;align-items:flex-start;padding:10px;border-radius:8px;transition:var(--transition)}.icon-list li:hover{background:rgba(227,72,161,.05)}.icon-list i{color:var(--primary);margin-right:15px;margin-top:3px;font-size:1.2rem}.testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}.testimonial-img{width:100%;border-radius:15px;box-shadow:var(--shadow);transition:var(--transition)}.testimonial-img:hover{transform:scale(1.03)}.faq-item{margin-bottom:20px;border:1px solid #e0e0e0;border-radius:10px;padding:20px;transition:var(--transition)}.faq-item:hover{border-color:var(--primary)}.faq-question{font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:1.2rem}.faq-answer{margin-top:15px;display:none;padding-top:15px;border-top:1px solid #e0e0e0}.faq-answer.active{display:block}.bonus-section{text-align:center}.bonus-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px}.bonus-card{background:var(--white);border-radius:15px;padding:40px 30px;box-shadow:var(--shadow);transition:var(--transition);position:relative;overflow:hidden}.bonus-card:before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--primary),var(--accent))}.bonus-card:hover{transform:translateY(-10px);box-shadow:0 15px 30px rgba(0,0,0,.15)}.bonus-card img{max-width:120px;margin-bottom:25px;border-radius:50%;box-shadow:0 5px 15px rgba(0,0,0,.1)}.certificate-img{max-width:100%;border-radius:15px;box-shadow:var(--shadow);margin-top:30px;transition:var(--transition)}.certificate-img:hover{transform:scale(1.02)}.guarantee-section{background:linear-gradient(135deg,#f9f9f9 0%,#e8f4f8 100%);border-radius:20px;padding:50px;margin:50px 0;box-shadow:var(--shadow)}.wave-divider{position:absolute;bottom:0;left:0;width:100%;overflow:hidden;line-height:0}.wave-divider svg{position:relative;display:block;width:calc(100% + 1.3px);height:50px}.wave-divider .shape-fill{fill:var(--light)}footer{background:linear-gradient(135deg,#2c2c2c 0%,#1a1a1a 100%);color:var(--white);padding:60px 0 30px}.footer-links{display:flex;justify-content:center;gap:40px;margin-bottom:40px}.footer-links a{color:var(--white);text-decoration:none;transition:var(--transition);font-weight:500}.footer-links a:hover{color:var(--primary)}.copyright{text-align:center;padding-top:30px;border-top:1px solid rgba(255,255,255,.1)}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.fade-in{animation:fadeIn 1s ease forwards}.delay-1{animation-delay:.2s}.delay-2{animation-delay:.4s}.delay-3{animation-delay:.6s}@media (max-width:768px){h1{font-size:2.4rem}h2{font-size:1.9rem}.btn-large{padding:18px 35px;font-size:1.3rem}.new-price{font-size:2.8rem}section{padding:60px 0}.footer-links{flex-direction:column;gap:20px;text-align:center}.guarantee-section{padding:30px}}@media (max-width:576px){h1{font-size:1.8rem}h2{font-size:1.5rem}.container{padding:0 15px}.price-section{padding:20px}.bonus-card{padding:30px 20px}.grid{grid-template-columns:1fr}}
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/04/logo-jessica-soares.png" alt="Jessica Soares">
+    <section class="bg-pattern">
+        <div class="container text-center">
+            <h1 class="fade-in">ALCANCE UM NOVO PATAMAR NA MICROPIGMENTAÇÃO</h1>
+            <h2 class="fade-in delay-1">Aprenda o Melhor Método Para Fazer a Micropigmentação Perfeita com <span class="highlight">Total Qualidade e Confiança!</span></h2>
+            <p class="fade-in delay-1">Você vai aprender <strong>Meu método exclusivo do absoluto zero,</strong> mesmo que seja iniciante e não tenha experiência!</p>
+            <div style="margin:40px 0" class="fade-in delay-2">
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:15px;box-shadow:0 10px 30px rgba(0,0,0,.2)">
+                    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%" src="https://www.youtube.com/embed/4-cPbeWHTOc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
-                <nav class="nav-menu">
-                    <a href="#curso">O Curso</a>
-                    <a href="#resultados">Resultados</a>
-                    <a href="#bonus">Bônus</a>
-                    <a href="#garantia">Garantia</a>
-                    <a href="#depoimentos">Depoimentos</a>
-                </nav>
-                <a href="https://go.hotmart.com/E102198663T?ap=cb28" class="btn-premium btn-sm">QUERO ME INSCREVER</a>
             </div>
+            <div class="progress-bar fade-in delay-2">
+                <div class="progress-fill" style="width:92%">92% (ÚLTIMAS VAGAS!)</div>
+            </div>
+            <div class="price-section fade-in delay-3">
+                <p class="old-price">De R$ <del>497,00</del></p>
+                <p><strong>Por Apenas</strong></p>
+                <p class="new-price">R$137,00 *</p>
+                <p class="installments">ou até 12x 15,02 no cartão</p>
+            </div>
+            <a href="https://go.hotmart.com/E102198663T?ap=cb28" class="btn btn-large fade-in delay-3">QUERO GARANTIR MINHA VAGA</a>
         </div>
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero" id="hero">
-        <div class="container">
-            <div class="text-center">
-                <h1 class="fade-in">ALCANCE UM NOVO PATAMAR NA <span class="highlight">MICROPIGMENTAÇÃO</span></h1>
-                <h2 class="fade-in" style="font-size: 1.8rem; font-weight: 400; margin-bottom: 30px; color: var(--gray);">
-                    Aprenda o Método Comprovado Para Fazer a Micropigmentação Perfeita com <strong>Total Qualidade e Confiança!</strong>
-                </h2>
-                <p class="fade-in" style="font-size: 1.2rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    Você vai aprender <strong>meu método exclusivo do absoluto zero,</strong> mesmo que seja iniciante e não tenha experiência!
-                </p>
-                
-                <!-- VIDEO -->
-                <div class="fade-in" style="margin: 40px 0;">
-                    <div style="position: relative; padding-bottom: 56.25%; height: 0; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.3);">
-                        <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-                                src="https://www.youtube.com/embed/4-cPbeWHTOc" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- PROGRESS BAR -->
-                <div class="progress-bar fade-in">
-                    <div class="progress-fill">92% PREENCHIDO - ÚLTIMAS VAGAS!</div>
-                </div>
-
-                <!-- PRICING -->
-                <div class="pricing-box fade-in">
-                    <div class="old-price">De R$ <del>497,00</del></div>
-                    <div style="color: var(--gray); margin-bottom: 10px; font-size: 1.2rem;">
-                        <strong>Por Apenas</strong>
-                    </div>
-                    <div class="new-price">R$137,00</div>
-                    <div class="installments">ou 12x de R$ 15,02 no cartão</div>
-                    <a href="https://go.hotmart.com/E102198663T?ap=cb28" class="btn-premium" style="display: block; width: 100%;">
-                        <i class="fas fa-arrow-right" style="margin-right: 10px;"></i>
-                        QUERO GARANTIR MINHA VAGA AGORA!
-                    </a>
-                </div>
-
-                <!-- SECURITY BADGES -->
-                <div class="fade-in" style="display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-lock" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
-                        <div style="font-weight: 600; color: var(--gray);">Pagamento<br>Seguro</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
-                        <div style="font-weight: 600; color: var(--gray);">Site<br>Protegido</div>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-certificate" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
-                        <div style="font-weight: 600; color: var(--gray);">Certificado<br>Válido</div>
-                    </div>
-                </div>
+        <div class="wave-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+    <section>
+        <div class="container text-center">
+            <h2 class="fade-in">Está pronta para <span class="highlight">fazer trabalhos incríveis</span> como esses em poucos dias?</h2>
+            <div class="grid" style="margin-top:50px">
+                <div class="fade-in"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-4-300x278.jpg" alt="Resultado micropigmentação" style="width:100%;border-radius:15px" loading="lazy"></div>
+                <div class="fade-in delay-1"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-1-300x235.jpg" alt="Resultado micropigmentação" style="width:100%;border-radius:15px" loading="lazy"></div>
+                <div class="fade-in delay-2"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-5-300x257.jpg" alt="Resultado micropigmentação" style="width:100%;border-radius:15px" loading="lazy"></div>
+                <div class="fade-in delay-3"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-3-300x229.jpg" alt="Resultado micropigmentação" style="width:100%;border-radius:15px" loading="lazy"></div>
             </div>
         </div>
     </section>
-
-    <!-- DIVIDER -->
-    <div class="section-divider"></div>
-
-    <!-- PARA QUEM É O CURSO -->
-    <section class="bg-light" id="curso">
-        <div class="container">
-            <h2 class="text-center fade-in">Para <span class="highlight">Quem é Este Curso?</span></h2>
-            <p class="text-center fade-in" style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 60px; color: var(--gray);">
-                Este curso foi desenvolvido para mulheres que desejam dominar a arte da micropigmentação, seja para iniciar uma carreira ou para aperfeiçoar suas técnicas.
-            </p>
-
-            <div class="grid-3">
-                <div class="glass-card text-center fade-in">
-                    <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                        <i class="fas fa-user-plus" style="font-size: 2.5rem; color: white;"></i>
-                    </div>
-                    <h3>Para Iniciantes</h3>
-                    <p style="color: var(--gray);">Que desejam aprender do zero e construir uma carreira sólida na micropigmentação com técnica profissional.</p>
-                </div>
-
-                <div class="glass-card text-center fade-in">
-                    <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                        <i class="fas fa-chart-line" style="font-size: 2.5rem; color: white;"></i>
-                    </div>
-                    <h3>Para Profissionais</h3>
-                    <p style="color: var(--gray);">Que querem se atualizar e aprender novas técnicas avançadas para aumentar sua renda e qualidade.</p>
-                </div>
-
-                <div class="glass-card text-center fade-in">
-                    <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px;">
-                        <i class="fas fa-home" style="font-size: 2.5rem; color: white;"></i>
-                    </div>
-                    <h3>Para Empreendedoras</h3>
-                    <p style="color: var(--gray);">Que desejam montar seu próprio studio e ser donas do próprio negócio de sucesso na área estética.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- RESULTADOS -->
-    <section class="bg-pattern" id="resultados">
-        <div class="container">
-            <h2 class="text-center fade-in">Está pronta para <span class="highlight">fazer trabalhos incríveis</span> como esses?</h2>
-            <p class="text-center fade-in" style="font-size: 1.2rem; margin-bottom: 60px; color: var(--gray);">
-                Veja os resultados reais de nossas alunas em poucos dias de prática!
-            </p>
-
-            <div class="testimonial-grid">
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-4-300x278.jpg" alt="Resultado micropigmentação" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-1-300x235.jpg" alt="Resultado micropigmentação" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-5-300x257.jpg" alt="Resultado micropigmentação" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-3-300x229.jpg" alt="Resultado micropigmentação" class="testimonial-img">
-                </div>
-            </div>
-            <div class="testimonial-grid" style="margin-top: 20px;">
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-2-300x235.jpg" alt="Resultado micropigmentação" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-6-300x235.jpg" alt="Resultado micropigmentação" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-4.jpg" alt="Resultado micropigmentação" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-5.jpg" alt="Resultado micropigmentação" class="testimonial-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTEÚDO DO CURSO -->
     <section class="bg-light">
         <div class="container">
-            <h2 class="text-center fade-in">O que você <span class="highlight">vai aprender</span> no curso?</h2>
-            <p class="text-center fade-in" style="font-size: 1.2rem; margin-bottom: 60px; color: var(--gray);">
-                Um conteúdo completo e detalhado para você se tornar uma expert em micropigmentação
-            </p>
-
-            <div class="grid-3">
-                <div class="glass-card fade-in">
-                    <h3 class="highlight" style="text-align: center; margin-bottom: 25px;">Módulo Básico</h3>
-                    <ul style="list-style: none; color: var(--gray);">
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Microblading Fio a Fio
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Retoque Microblading
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Shadow Line
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Ombré Shadow
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Técnica Híbrida
-                        </li>
-                        <li style="padding: 10px 0;">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Lista de Materiais
-                        </li>
+            <h2 class="text-center fade-in">Veja o que você <span class="highlight">vai aprender!</span></h2>
+            <div class="grid" style="margin-top:50px">
+                <div class="fade-in">
+                    <ul class="icon-list">
+                        <li><i class="far fa-check-circle"></i> Microblading Fio a Fio</li>
+                        <li><i class="far fa-check-circle"></i> Retoque Microblading Fio a Fio</li>
+                        <li><i class="far fa-check-circle"></i> Micropigmentação Shadow Line</li>
+                        <li><i class="far fa-check-circle"></i> Retoque Micropigmentação Shadow Line</li>
+                        <li><i class="far fa-check-circle"></i> Micropigmentação Ombré Shadow</li>
+                        <li><i class="far fa-check-circle"></i> Retoque Micropigmentação Ombré Shadow</li>
+                        <li><i class="far fa-check-circle"></i> Micropigmentação Híbrida</li>
+                        <li><i class="far fa-check-circle"></i> Retoque Micropigmentação Híbrida</li>
+                        <li><i class="far fa-check-circle"></i> Lista de Materiais</li>
+                        <li><i class="far fa-check-circle"></i> Tipos de Agulhas</li>
+                        <li><i class="far fa-check-circle"></i> Treino Trama Fios 1 e 2</li>
+                        <li><i class="far fa-check-circle"></i> Dica de Treino na Faixa Smarch</li>
+                        <li><i class="far fa-check-circle"></i> Marcação do Design para Micropigmentação</li>
                     </ul>
                 </div>
-
-                <div class="glass-card fade-in">
-                    <h3 class="highlight" style="text-align: center; margin-bottom: 25px;">Módulo Técnico</h3>
-                    <ul style="list-style: none; color: var(--gray);">
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Tipos de Agulhas
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Treino Trama Fios
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Marcação do Design
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Kit Pós-Procedimento
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Teste Alérgico
-                        </li>
-                        <li style="padding: 10px 0;">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Anatomia da Pele
-                        </li>
+                <div class="fade-in delay-1">
+                    <ul class="icon-list">
+                        <li><i class="far fa-check-circle"></i> Kit de Cuidados Pós Procedimento</li>
+                        <li><i class="far fa-check-circle"></i> Como Fazer o Teste Alérgico</li>
+                        <li><i class="far fa-check-circle"></i> Anatomia da Pele</li>
+                        <li><i class="far fa-check-circle"></i> Tipos de Pele</li>
+                        <li><i class="far fa-check-circle"></i> Contra Indicações</li>
+                        <li><i class="far fa-check-circle"></i> Sobrancelhas Azuladas. Qual o motivo?</li>
+                        <li><i class="far fa-check-circle"></i> A Melanina Influencia na Cor Final?</li>
+                        <li><i class="far fa-check-circle"></i> Fatores que Afetam a Micropigmentação</li>
+                        <li><i class="far fa-check-circle"></i> Fases da Cicatrização</li>
+                        <li><i class="far fa-check-circle"></i> Fundamento dos Pigmentos</li>
+                        <li><i class="far fa-check-circle"></i> Pigmento Organico e Inorgânico</li>
+                        <li><i class="far fa-check-circle"></i> Pigmento Hidrofílico e Hidrofóbico</li>
+                        <li><i class="far fa-check-circle"></i> Colorimetria Aplicada a Micropigmentação​</li>
                     </ul>
                 </div>
-
-                <div class="glass-card fade-in">
-                    <h3 class="highlight" style="text-align: center; margin-bottom: 25px;">Módulo Avançado</h3>
-                    <ul style="list-style: none; color: var(--gray);">
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Colorimetria
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Dermógrafos
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Tipos de Lâmina
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Preparo de Bancada
-                        </li>
-                        <li style="padding: 10px 0; border-bottom: 1px solid var(--gray-light);">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Ficha de Anamnese
-                        </li>
-                        <li style="padding: 10px 0;">
-                            <i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i>
-                            Biossegurança
-                        </li>
+                <div class="fade-in delay-2">
+                    <ul class="icon-list">
+                        <li><i class="far fa-check-circle"></i> Dermógrafos</li>
+                        <li><i class="far fa-check-circle"></i> Tipos de Lâmina</li>
+                        <li><i class="far fa-check-circle"></i> O Ângulo Correto da Agulha e da Lâmina</li>
+                        <li><i class="far fa-check-circle"></i> Fornecedores</li>
+                        <li><i class="far fa-check-circle"></i> Como Preparar a sua Bancada</li>
+                        <li><i class="far fa-check-circle"></i> Como Encapar o Dermógrafo e o Tebori</li>
+                        <li><i class="far fa-check-circle"></i> Ajuste Ideal da Agulha no Dermógrafo</li>
+                        <li><i class="far fa-check-circle"></i> Como Encaixar a Lâmina no Tebori</li>
+                        <li><i class="far fa-check-circle"></i> Como Fazer a Espuma Suavizante</li>
+                        <li><i class="far fa-check-circle"></i> Descartar Corretamente Agulhas e Lâminas</li>
+                        <li><i class="far fa-check-circle"></i> Ficha de Anamnese</li>
+                        <li><i class="far fa-check-circle"></i> Como se Paramentar</li>
+                        <li><i class="far fa-check-circle"></i> Como Remover as Luvas com Segurança</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="text-center fade-in" style="margin-top: 50px;">
-                <h3>E muito mais conteúdo exclusivo!</h3>
-                <p style="color: var(--gray); margin-top: 15px;">+50 aulas detalhadas com técnicas comprovadas</p>
-            </div>
+            <h3 class="text-center fade-in delay-3" style="margin-top:50px">E Muito mais...</h3>
         </div>
     </section>
-
-    <!-- BÔNUS -->
-    <section class="bg-pattern" id="bonus">
-        <div class="container">
-            <h2 class="text-center fade-in">Adquira hoje e receba <span class="highlight">3 Bônus Exclusivos!</span></h2>
-            <p class="text-center fade-in" style="font-size: 1.2rem; margin-bottom: 60px; color: var(--gray);">
-                Bônus limitados por tempo - Garanta já o seu!
-            </p>
-
-            <div class="grid-3">
+    <section class="bg-pattern">
+        <div class="container bonus-section">
+            <h2 class="fade-in">Adquira hoje e receba <span class="highlight">03 Bônus Especiais!</span></h2>
+            <div class="bonus-grid">
                 <div class="bonus-card fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/mentoria.png" alt="Mentoria" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 25px;">
+                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/mentoria.png" alt="Mentoria" loading="lazy">
                     <h3>Bônus 1</h3>
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">Mentoria Online</h4>
-                    <p style="color: var(--gray); margin-bottom: 20px;">Acesso direto comigo para suporte personalizado e tirar todas suas dúvidas.</p>
-                    <div style="background: var(--light); padding: 15px; border-radius: 10px;">
-                        <strong style="color: var(--primary);">Valor: R$ 997,00</strong>
-                    </div>
+                    <h4>Minha Mentoria Online</h4>
+                    <p>Você terá acesso direto comigo para ter suporte e tirar suas dúvidas.</p>
+                    <p><strong>Custa R$ 997,00</strong></p>
                 </div>
-
-                <div class="bonus-card fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Marketing.png" alt="Marketing" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 25px;">
+                <div class="bonus-card fade-in delay-1">
+                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Marketing.png" alt="Marketing" loading="lazy">
                     <h3>Bônus 2</h3>
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">E-book Marketing</h4>
-                    <p style="color: var(--gray); margin-bottom: 20px;">Aprenda estratégias para atrair clientes e alavancar seu negócio.</p>
-                    <div style="background: var(--light); padding: 15px; border-radius: 10px;">
-                        <strong style="color: var(--primary);">Valor: R$ 57,00</strong>
-                    </div>
+                    <h4>E-book Marketing para o seu Trabalho</h4>
+                    <p>Vou te ensinar como atrair Clientes</p>
+                    <p><strong>Custa R$ 57,00</strong></p>
                 </div>
-
-                <div class="bonus-card fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Studio.png" alt="Studio" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 25px;">
+                <div class="bonus-card fade-in delay-2">
+                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Studio.png" alt="Studio" loading="lazy">
                     <h3>Bônus 3</h3>
-                    <h4 style="color: var(--primary); margin-bottom: 15px;">E-book Studio</h4>
-                    <p style="color: var(--gray); margin-bottom: 20px;">Guia completo para montar seu próprio studio do zero com baixo investimento.</p>
-                    <div style="background: var(--light); padding: 15px; border-radius: 10px;">
-                        <strong style="color: var(--primary);">Valor: R$ 97,00</strong>
-                    </div>
+                    <h4>E-book Dicas de como montar o seu Studio</h4>
+                    <p>Aprenda como montar o seu próprio Studio</p>
+                    <p><strong>Custa R$ 97,00</strong></p>
                 </div>
             </div>
-
-            <div class="text-center fade-in" style="margin-top: 50px;">
-                <h3 class="highlight">TOTAL EM BÔNUS: <span style="color: var(--primary);">R$ 1.151,00</span></h3>
-                <p style="color: var(--gray); font-size: 1.3rem; margin-top: 15px;">HOJE TODOS ESSES BÔNUS SÃO SEUS <strong>GRATUITAMENTE!</strong></p>
-            </div>
+            <h2 class="fade-in delay-3" style="margin-top:50px">SÃO MAIS R$ 1.200,00 REAIS EM BÔNUS, TOTALMENTE GRÁTIS!</h2>
+            <p class="fade-in delay-3">Mas hoje vai ser seu de Bônus!</p>
         </div>
     </section>
-
-    <!-- CERTIFICADO -->
     <section class="bg-light">
         <div class="container text-center">
             <h2 class="fade-in"><span class="highlight">Certificado</span> de Conclusão</h2>
-            <p class="fade-in" style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 40px; color: var(--gray);">
-                Ao concluir o curso, você receberá um certificado digital reconhecido, validando sua qualificação profissional.
-            </p>
-            <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Certificado-de-conclusao-4.png" 
-                 alt="Certificado de Conclusão" 
-                 class="fade-in"
-                 style="max-width: 100%; border-radius: 15px; box-shadow: var(--shadow-lg); transition: var(--transition);">
-            <p class="fade-in" style="margin-top: 30px; color: var(--gray);">
-                <strong>Emita seu certificado diretamente na área do aluno após a conclusão!</strong>
-            </p>
+            <p class="fade-in">Após concluir o Curso Sobrancelhas Perfeitas, você terá acesso a um lindo certificado de conclusão que você poderá emitir direto da sua área do aluno.</p>
+            <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Certificado-de-conclusao-4.png" alt="Certificado" class="certificate-img fade-in delay-1" loading="lazy">
         </div>
     </section>
-
-    <!-- DEPOIMENTOS -->
-    <section class="bg-pattern" id="depoimentos">
+    <section>
         <div class="container">
-            <h2 class="text-center fade-in">O que nossas <span class="highlight">alunas dizem</span>?</h2>
-            <p class="text-center fade-in" style="font-size: 1.2rem; margin-bottom: 60px; color: var(--gray);">
-                Resultados reais de mulheres reais que transformaram suas vidas com o curso
-            </p>
-
-            <div class="testimonial-grid">
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-4.jpg" alt="Depoimento" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-5.jpg" alt="Depoimento" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-3.jpg" alt="Depoimento" class="testimonial-img">
-                </div>
-                <div class="fade-in">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-1.jpg" alt="Depoimento" class="testimonial-img">
-                </div>
+            <h2 class="text-center fade-in">Será que realmente <span class="highlight">funciona?</span></h2>
+            <p class="text-center fade-in">Veja os depoimentos de nossas alunas!</p>
+            <div class="testimonial-grid" style="margin-top:50px">
+                <div class="fade-in"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-4.jpg" alt="Depoimento" class="testimonial-img" loading="lazy"></div>
+                <div class="fade-in delay-1"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-5.jpg" alt="Depoimento" class="testimonial-img" loading="lazy"></div>
+                <div class="fade-in delay-2"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-3.jpg" alt="Depoimento" class="testimonial-img" loading="lazy"></div>
             </div>
         </div>
     </section>
-
-    <!-- GARANTIA -->
-    <section class="bg-light" id="garantia">
-        <div class="container">
-            <div class="glass-card" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 60px 40px; border: 2px solid rgba(227, 72, 161, 0.2);">
-                <div class="grid-2">
-                    <div class="fade-in">
-                        <h2 style="color: var(--secondary); margin-bottom: 25px;">Ainda está com <span class="highlight">dúvidas?</span></h2>
-                        <p style="color: var(--gray); margin-bottom: 20px; font-size: 1.1rem;">
-                            O <strong>Curso Micropigmentação Perfeita</strong> simplesmente funciona. A prova disso são as milhares de alunas com resultados incríveis que tiveram suas vidas transformadas.
-                        </p>
-                        <p style="color: var(--gray); margin-bottom: 20px; font-size: 1.1rem;">
-                            Mas se você ainda tem alguma dúvida, vou permitir que você <strong>experimente por 7 dias</strong> e caso você não goste ou não veja nenhum resultado, basta me enviar um e-mail durante esse período que devolvo todo o valor que você pagou.
-                        </p>
-                        <p style="color: var(--gray); margin-bottom: 20px; font-size: 1.1rem;">
-                            O objetivo é adicionar Valor Real à sua Vida, mostrando técnicas extremamente eficazes que levarão você a ser uma Designer de Sucesso.
-                        </p>
-                        <p style="color: var(--primary); font-weight: 700; font-size: 1.2rem;">
-                            O único risco que você corre é de estar aqui e se tornar uma Expert em Micropigmentação e ter Sucesso. Simples assim!
-                        </p>
-                    </div>
-                    <div class="text-center fade-in">
-                        <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/risco-zero-1-1.png" 
-                             alt="Garantia de 7 Dias" 
-                             style="max-width: 100%; border-radius: 15px; box-shadow: var(--shadow);">
-                        <div style="margin-top: 30px;">
-                            <h3 class="highlight" style="margin-bottom: 15px;">Garantia Incondicional</h3>
-                            <p style="color: var(--gray);">7 dias para testar sem riscos!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
     <section class="bg-pattern">
         <div class="container">
-            <h1 class="text-center fade-in">PERGUNTAS FREQUENTES</h1>
-            <p class="text-center fade-in" style="font-size: 1.2rem; margin-bottom: 60px; color: var(--gray);">
-                Tire todas suas dúvidas antes de garantir sua vaga
-            </p>
-
-            <div class="faq-list">
-                <div class="faq-item fade-in">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Qual o formato do curso?</span>
-                        <i class="fas fa-chevron-down"></i>
+            <div class="guarantee-section">
+                <div class="grid">
+                    <div class="fade-in">
+                        <h2>Ainda está <span class="highlight">na dúvida?</span></h2>
+                        <p>Não tem dúvida, o Curso Micropigmentação Perfeita simplesmente funciona. A prova disso são as milhares de alunas com resultados incríveis e que tiveram suas vidas transformadas.</p>
+                        <p>Mas se você ainda tem alguma dúvida, vou permitir que você <strong>experimente por 7 dias</strong> e caso você não goste ou não veja nenhum resultado, basta me enviar um e-mail durante esse período que devolvo todo o valor que você pagou.</p>
+                        <p>O Objetivo é adicionar Valor Real à sua Vida, mostrando técnicas extremamente eficazes que levará você a ser uma Designer de Sucesso.</p>
+                        <p><strong>O único risco que você corre é de estar aqui e se tornar uma Expert em Micropigmentação e ter Sucesso. Simples assim!</strong></p>
                     </div>
-                    <div class="faq-answer">
-                        <p>O curso é 100% online, composto por vídeo aulas gravadas que você pode assistir quando e onde quiser, além de material de apoio em PDF e bônus exclusivos.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Por quanto tempo terei acesso ao curso?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Você terá acesso ao curso completo por 1 ano. Tempo mais que suficiente para assistir todas as aulas, revisar o conteúdo e colocar em prática.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Recebo algum certificado?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim! Ao concluir o curso você recebe um certificado digital de conclusão que comprova sua qualificação profissional.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Como funciona a garantia de 7 dias?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Você tem 7 dias para testar o curso. Se por qualquer motivo não ficar satisfeita, basta enviar um email que devolvemos 100% do seu investimento.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Preciso ter experiência prévia?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Não! O curso foi desenvolvido para iniciantes e ensina tudo do absoluto zero. Mesmo sem nenhuma experiência você conseguirá acompanhar perfeitamente.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item fade-in">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Quais as formas de pagamento?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Aceitamos cartão de crédito (em até 12x), boleto bancário e PIX. Todas as opções com acesso imediato ao curso após a confirmação do pagamento.</p>
+                    <div class="text-center fade-in delay-1">
+                        <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/risco-zero-1-1.png" alt="Garantia de 7 dias" style="max-width:100%;border-radius:15px" loading="lazy">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- CTA FINAL -->
-    <section class="bg-gradient">
-        <div class="container text-center">
-            <h2 class="fade-in" style="color: white; margin-bottom: 30px;">Não Perça Esta Oportunidade Única!</h2>
-            <p class="fade-in" style="font-size: 1.3rem; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">
-                Junte-se a milhares de alunas que já transformaram suas vidas com a micropigmentação
-            </p>
-
-            <!-- PROGRESS BAR -->
-            <div class="progress-bar fade-in" style="max-width: 600px; margin: 0 auto 40px;">
-                <div class="progress-fill" style="width: 95%; background: rgba(255,255,255,0.9); color: var(--primary);">
-                    ÚLTIMAS VAGAS DISPONÍVEIS!
-                </div>
-            </div>
-
-            <!-- PRICING -->
-            <div class="pricing-box fade-in" style="background: rgba(255,255,255,0.95); color: var(--secondary);">
-                <div class="old-price" style="color: #ff4444;">De R$ <del>497,00</del></div>
-                <div style="color: var(--gray); margin-bottom: 10px; font-size: 1.2rem;">
-                    <strong>Por Apenas</strong>
-                </div>
-                <div class="new-price" style="color: var(--primary);">R$137,00</div>
-                <div class="installments" style="color: var(--gray);">ou 12x de R$ 15,02 no cartão</div>
-                <a href="https://go.hotmart.com/E102198663T?ap=cb28" class="btn-premium" style="display: block; width: 100%; background: var(--primary);">
-                    <i class="fas fa-arrow-right" style="margin-right: 10px;"></i>
-                    GARANTIR MINHA VAGA AGORA!
-                </a>
-            </div>
-
-            <!-- PAYMENT METHODS -->
-            <div class="fade-in" style="margin-top: 40px;">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/04/pagamento-1.png" 
-                     alt="Métodos de Pagamento" 
-                     style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-dark">
+    <section>
         <div class="container">
-            <div class="footer-links" style="display: flex; justify-content: center; gap: 40px; margin-bottom: 40px; flex-wrap: wrap;">
-                <a href="https://micropigmentacaodesobrancelha.com/politicas-de-privacidade/" style="color: white; text-decoration: none; transition: var(--transition);">
-                    Políticas de Privacidade
-                </a>
-                <a href="https://micropigmentacaodesobrancelha.com/termos-e-condicoes/" style="color: white; text-decoration: none; transition: var(--transition);">
-                    Termos de Uso
-                </a>
-                <a href="mailto:suporte@studiojessicasoares.com.br" style="color: white; text-decoration: none; transition: var(--transition);">
-                    Contato
-                </a>
+            <h1 class="text-center fade-in">PERGUNTAS FREQUENTES</h1>
+            <div class="faq-list" style="margin-top:50px">
+                <div class="faq-item fade-in">
+                    <div class="faq-question" onclick="toggleFAQ(this)"><span>Qual o formato do curso?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Você terá acesso a diversas vídeo aulas (passo a passo) + Bônus Especiais.</p></div>
+                </div>
+                <div class="faq-item fade-in delay-1">
+                    <div class="faq-question" onclick="toggleFAQ(this)"><span>Qual o valor do curso?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Atualmente o Curso Micropigmentação Perfeita está no valor promocional de apenas R$137,00</p></div>
+                </div>
+                <div class="faq-item fade-in delay-2">
+                    <div class="faq-question" onclick="toggleFAQ(this)"><span>Quais as formas de pagamento?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Você tem as opções de pagamento via cartões de crédito, boleto ou paypal.</p></div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question" onclick="toggleFAQ(this)"><span>Ainda não recebi o curso, o que fazer?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Verifique as caixas de spam/lixo/outros de seu e-mail, pois o link de acesso pode ser redirecionado para alguma dessas pastas.</p></div>
+                </div>
+                <div class="faq-item fade-in delay-1">
+                    <div class="faq-question" onclick="toggleFAQ(this)"><span>Como vou receber o curso?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Assim que seu pedido for aprovado, o link de acesso ao curso será enviado ao seu e-mail, onde você terá acesso à sua área de membros do curso com login e senha pessoal.</p></div>
+                </div>
+                <div class="faq-item fade-in delay-2">
+                    <div class="faq-question" onclick="toggleFAQ(this)"><span>Tenho que pagar alguma mensalidade?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Não, esse valor é único. Sem qualquer taxa ou mensalidade adicional.</p></div>
+                </div>
+                <div class="faq-item fade-in">
+                    <div class="faq-question" onclick="toggleFAQ(this)"><span>Por quanto tempo terei acesso ao curso?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p>Você terá acesso ao curso por 1 ano e caso não se sinta satisfeito com sua compra, você pode fazer o cancelamento em até 7 dias.</p></div>
+                </div>
             </div>
-            <div class="copyright" style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1);">
-                <p>Copyright © 2025 - <strong>Curso Micropigmentação Perfeita</strong> - CNPJ: 52.832.200/0001-04 - Todos os Direitos Reservados.</p>
+        </div>
+    </section>
+    <section class="bg-light">
+        <div class="container text-center">
+            <div class="progress-bar fade-in"><div class="progress-fill" style="width:92%">92% (ÚLTIMAS VAGAS!)</div></div>
+            <div class="price-section fade-in delay-1">
+                <p class="old-price">De R$ <del>497,00</del></p>
+                <p><strong>Por Apenas</strong></p>
+                <p class="new-price">R$137,00 *</p>
+                <p class="installments">ou até 12x 15,02 no cartão</p>
             </div>
+            <a href="https://go.hotmart.com/E102198663T?ap=cb28" class="btn btn-large fade-in delay-2">QUERO GARANTIR MINHA VAGA</a>
+            <div style="margin-top:40px" class="fade-in delay-3"><img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/04/pagamento-1.png" alt="Métodos de pagamento" style="max-width:100%;border-radius:10px" loading="lazy"></div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-links"><a href="https://micropigmentacaodesobrancelha.com/politicas-de-privacidade/">Políticas de Privacidade</a><a href="https://micropigmentacaodesobrancelha.com/termos-e-condicoes/">Termos de uso</a></div>
+            <div class="copyright"><p>Copyright © 2025 - <b>Curso Micropigmentação Perfeita 2025</b> - CNPJ: 52.832.200/0001-04 - Todos os Direitos Reservados.</p></div>
         </div>
     </footer>
-
-    <!-- FLOATING WHATSAPP -->
-    <div style="position: fixed; bottom: 30px; right: 30px; z-index: 1000;">
-        <a href="https://wa.me/5511999999999?text=Olá! Gostaria de mais informações sobre o curso de micropigmentação" 
-           style="background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); transition: var(--transition);">
-            <i class="fab fa-whatsapp" style="font-size: 1.8rem;"></i>
-        </a>
-    </div>
-
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // FAQ toggle
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('i');
-            
-            if (answer.classList.contains('active')) {
-                answer.classList.remove('active');
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
-            } else {
-                answer.classList.add('active');
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
-            }
-        }
-
-        // Scroll animations
-        const fadeElements = document.querySelectorAll('.fade-in');
-        
-        const fadeInOnScroll = function() {
-            fadeElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('active');
-                }
-            });
-        };
-
-        // Initialize
-        window.addEventListener('scroll', fadeInOnScroll);
-        window.addEventListener('load', fadeInOnScroll);
-        fadeInOnScroll(); // Check on load
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        function toggleFAQ(e){const t=e.nextElementSibling,n=e.querySelector("i");t.classList.contains("active")?(t.classList.remove("active"),n.classList.remove("fa-chevron-up"),n.classList.add("fa-chevron-down")):(t.classList.add("active"),n.classList.remove("fa-chevron-down"),n.classList.add("fa-chevron-up"))}document.addEventListener("DOMContentLoaded",function(){const e=document.querySelectorAll(".fade-in");function t(){e.forEach(e=>{e.getBoundingClientRect().top<window.innerHeight-150&&e.classList.add("active")})}t(),window.addEventListener("scroll",t)});
     </script>
 </body>
 </html>
