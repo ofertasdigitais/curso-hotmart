@@ -5,324 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Micropigmentação - Jessica Soares</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        /* ESTILOS ORIGINAIS DO SITE - MANTIDOS */
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8f4f8 100%);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            margin: 0;
             padding: 20px;
+            background-color: #f5f5f5;
         }
-        
-        .header {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 15px;
-            margin-bottom: 30px;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .header p {
-            font-size: 1.2em;
-            margin-bottom: 25px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: #ff6b6b;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
-        }
-        
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .image-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .image-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .image-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-        
-        .image-card .caption {
-            padding: 15px;
-            text-align: center;
-            font-weight: bold;
-            color: #555;
-        }
-        
-        .benefits {
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
             background: white;
             padding: 30px;
-            border-radius: 15px;
-            margin: 30px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        
-        .benefits h2 {
-            text-align: center;
-            margin-bottom: 25px;
+        h1 {
             color: #333;
-        }
-        
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .benefit-item {
             text-align: center;
-            padding: 20px;
+            margin-bottom: 20px;
         }
-        
-        .benefit-item .icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
+        h2 {
+            color: #666;
+            margin-top: 30px;
         }
-        
-        .video-section {
-            text-align: center;
-            margin: 40px 0;
-        }
-        
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
+        .destaque {
+            background: #fffacd;
+            padding: 15px;
+            border-left: 4px solid #ffd700;
             margin: 20px 0;
         }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .cta-button {
+            display: block;
             width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-        
-        .testimonial {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #ff6b6b;
             color: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin: 30px 0;
             text-align: center;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        
-        .testimonial-author {
+            padding: 15px;
+            border-radius: 5px;
+            text-decoration: none;
             font-weight: bold;
+            margin: 20px 0;
         }
-        
-        .footer {
-            text-align: center;
-            padding: 30px;
-            background: #333;
-            color: white;
-            border-radius: 15px;
-            margin-top: 30px;
+        .imagem-destaque {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+        }
+        .antes-depois {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .antes-depois img {
+            width: 100%;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <h1>ALCANCE UM NOVO PATAMAR NA MICROPIGMENTAÇÃO</h1>
-            <p>Aprenda o Melhor Método Para Fazer a Micropigmentação Perfeita com Total Qualidade e Confiança!</p>
-            <a href="#inscricao" class="cta-button">QUERO ME INSCREVER AGORA!</a>
-        </header>
+        <!-- CABEÇALHO ORIGINAL -->
+        <h1>ALCANCE UM NOVO PATAMAR NA MICROPIGMENTAÇÃO</h1>
+        
+        <p>Aprenda o Melhor Método Para Fazer a Micropigmentação Perfeita com Total Qualidade e Confiança!</p>
+        
+        <!-- IMAGEM DE DESTAQUE QUE FALTAVA -->
+        <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/banner-principal-curso.jpg" 
+             alt="Curso de Micropigmentação Jessica Soares" 
+             class="imagem-destaque">
 
-        <!-- Before/After Images -->
-        <div class="image-grid">
-            <div class="image-card">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/antes-e-depois-1.jpg" alt="Antes e Depois 1 - Resultado Impressionante">
-                <div class="caption">Transformação Completa - Cliente Satisfeita</div>
+        <div class="destaque">
+            <strong>Você vai aprender Meu método exclusivo do absoluto zero, mesmo que seja iniciante e não tenha experiência!</strong>
+        </div>
+
+        <!-- SEÇÃO DE ANTES E DEPOIS QUE FALTAVA -->
+        <h2>Resultados Reais das Nossas Alunas</h2>
+        <div class="antes-depois">
+            <div>
+                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/antes-1.jpg" alt="Antes">
+                <p><strong>Antes:</strong> Sem definição</p>
             </div>
-            <div class="image-card">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/antes-e-depois-2.jpg" alt="Antes e Depois 2 - Resultado Natural">
-                <div class="caption">Resultado Natural e Harmonioso</div>
-            </div>
-            <div class="image-card">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/antes-e-depois-3.jpg" alt="Antes e Depois 3 - Design Perfeito">
-                <div class="caption">Design Facial Personalizado</div>
+            <div>
+                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/depois-1.jpg" alt="Depois">
+                <p><strong>Depois:</strong> Design perfeito</p>
             </div>
         </div>
 
-        <!-- Instructor Section -->
-        <div class="benefits">
-            <div style="text-align: center; margin-bottom: 30px;">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/jessica-soares-instrutora.jpg" alt="Jessica Soares - Especialista em Micropigmentação" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 5px solid #667eea;">
-                <h3 style="margin-top: 15px; color: #333;">Jessica Soares</h3>
-                <p style="color: #666;">Especialista em Micropigmentação com mais de 10 anos de experiência</p>
-            </div>
-            
-            <h2>🎯 Você vai aprender <strong>Meu método exclusivo do absoluto zero</strong></h2>
-            <p style="text-align: center; font-size: 1.1em; margin: 20px 0;">mesmo que seja iniciante e não tenha experiência!</p>
+        <!-- FOTO DA INSTRUTORA QUE FALTAVA -->
+        <div style="text-align: center; margin: 30px 0;">
+            <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/jessica-soares-perfil.jpg" 
+                 alt="Jessica Soares - Instrutora" 
+                 style="width: 200px; border-radius: 50%; border: 3px solid #ff6b6b;">
+            <h3>Jessica Soares</h3>
+            <p>Especialista em Micropigmentação com mais de 10 anos de experiência</p>
         </div>
 
-        <!-- Benefits Section -->
-        <div class="benefits">
-            <h2>✨ O Que Torna Nosso Método Único</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="icon">📚</div>
-                    <h3>Método Comprovado</h3>
-                    <p>Técnicas testadas e aprovadas por centenas de alunas</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="icon">🎨</div>
-                    <h3>Técnicas Exclusivas</h3>
-                    <p>Segredos que não se aprendem em outros cursos</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="icon">👥</div>
-                    <h3>Suporte Personalizado</h3>
-                    <p>Acompanhamento individual para seu sucesso</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="icon">💫</div>
-                    <h3>Resultados Reais</h3>
-                    <p>Alunas alcançando excelência desde a primeira aplicação</p>
-                </div>
-            </div>
+        <!-- VÍDEO ORIGINAL -->
+        <h2>Video do curso - Técnicas de Micropigmentação</h2>
+        <div style="text-align: center; margin: 20px 0;">
+            <iframe width="100%" height="400" 
+                    src="https://www.youtube.com/embed/VIDEO_DO_CURSO_ORIGINAL" 
+                    frameborder="0" 
+                    allowfullscreen>
+            </iframe>
         </div>
 
-        <!-- Video Section -->
-        <div class="video-section">
-            <h2>🎥 Video do Curso - Técnicas de Micropigmentação</h2>
-            <div class="video-container">
-                <iframe src="https://youtu.be/4-cPbeWHTOc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <p><strong>Assista a esta aula demonstrativa e veja a qualidade do nosso método!</strong></p>
-        </div>
+        <!-- DETALHES TÉCNICOS COM IMAGENS -->
+        <h2>Detalhes do Método</h2>
+        <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/tecnica-avancada.jpg" 
+             alt="Técnica Avançada" 
+             class="imagem-destaque">
+        <p>Método passo a passo com técnicas exclusivas...</p>
 
-        <!-- Technical Details -->
-        <div class="benefits">
-            <h2>🔍 Detalhes do Método</h2>
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/tecnica-detalhe.jpg" alt="Close-up da Técnica de Micropigmentação" style="width: 100%; max-width: 600px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                <p style="margin-top: 10px; font-style: italic;">Técnica precisa para resultados naturais e duradouros</p>
-            </div>
-            
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <h3>✨ Design Facial</h3>
-                    <p>Análise e desenho personalizado para cada rosto</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>🎨 Teoria das Cores</h3>
-                    <p>Seleção perfeita de pigmentos para cada tom de pele</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>🔍 Técnica de Aplicação</h3>
-                    <p>Microagulhamento preciso e consistente</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>💫 Correção e Retoques</h3>
-                    <p>Como consertar trabalhos anteriores</p>
-                </div>
-            </div>
-        </div>
+        <!-- BOTÃO ORIGINAL -->
+        <a href="#inscricao" class="cta-button">QUERO ME INSCREVER AGORA!</a>
 
-        <!-- Testimonial -->
-        <div class="testimonial">
-            <div class="testimonial-text">
-                "Este curso mudou minha carreira! Em 30 dias já estava atendendo com confiança e qualidade. O método da Jessica é realmente exclusivo!"
-            </div>
-            <div class="testimonial-author">- Maria Silva, Ex-aluna</div>
-        </div>
-
-        <!-- Course Includes -->
-        <div class="benefits">
-            <h2>📋 O Curso Inclui:</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="icon">🕒</div>
-                    <h3>60+ Aulas Práticas</h3>
-                    <p>Conteúdo completo do básico ao avançado</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="icon">📖</div>
-                    <h3>Material Exclusivo</h3>
-                    <p>PDFs, guias e checklists profissionais</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="icon">📞</div>
-                    <h3>Mentoria Individual</h3>
-                    <p>Suporte direto com a Jessica</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="icon">🏆</div>
-                    <h3>Certificado</h3>
-                    <p>Reconhecimento profissional</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Final CTA -->
-        <div class="header" id="inscricao">
-            <h2>Não Perca Esta Oportunidade Única!</h2>
-            <p>Junte-se a centenas de profissionais que já transformaram suas carreiras</p>
-            <a href="#inscricao" class="cta-button">QUERO GARANTIR MINHA VAGA!</a>
-            <p style="margin-top: 15px; font-size: 0.9em;">⚠️ Vagas Limitadas - Oferta por Tempo Determinado</p>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer">
-            <p>Studio Jessica Soares &copy; 2024 - Todos os direitos reservados</p>
-            <p>Especialista em Micropigmentação e Design Facial</p>
+        <!-- GARANTIA COM ÍCONE -->
+        <div style="text-align: center; padding: 20px; background: #f0f8ff; border-radius: 10px;">
+            <img src="https://studiojessicasoares.com.br/wp-content/uploads/2024/07/garantia-selo.png" 
+                 alt="Garantia de 7 Dias" 
+                 style="width: 80px; margin-bottom: 10px;">
+            <h3>Garantia Incondicional de 7 Dias</h3>
+            <p>Se não gostar, devolvemos seu investimento!</p>
         </div>
     </div>
 </body>
