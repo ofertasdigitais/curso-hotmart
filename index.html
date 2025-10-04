@@ -6,909 +6,593 @@
     <title>Curso de Micropigmentação - Jessica Soares</title>
     <meta name="description" content="Aprenda micropigmentação do zero com a expert Jessica Soares. Curso completo com certificado e suporte especializado.">
     <meta name="robots" content="index, follow">
-    <link rel="preload" href="https://studiojessicasoares.com.br/wp-content/themes/olympus-google-fonts.php?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" as="style">
+    
+    <!-- Meta Tags Open Graph -->
+    <meta property="og:title" content="Curso de Micropigmentação - Jessica Soares">
+    <meta property="og:description" content="Aprenda micropigmentação do zero com a expert Jessica Soares. Curso completo com certificado e suporte especializado.">
+    <meta property="og:image" content="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/thumb-curso-micropigmentacao.jpg">
+    <meta property="og:url" content="https://ofertasdigitais.github.io/curso-hotmart/index.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Curso de Micropigmentação - Jessica Soares">
+    <meta name="twitter:description" content="Aprenda micropigmentação do zero com a expert Jessica Soares.">
+    <meta name="twitter:image" content="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/thumb-curso-micropigmentacao.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ofertasdigitais.github.io/curso-hotmart/index.html">
+    
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="https://studiojessicasoares.com.br/wp-content/uploads/2021/04/logo-jessica-soares.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" as="style">
+    
+    <!-- CSS do Elementor e WordPress -->
+    <link rel="stylesheet" href="https://studiojessicasoares.com.br/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.21.8">
+    <link rel="stylesheet" href="https://studiojessicasoares.com.br/wp-content/themes/olympus/style.css?ver=1.0.0">
+    <link rel="stylesheet" href="https://studiojessicasoares.com.br/wp-includes/css/dist/block-library/style.min.css?ver=6.4.3">
+    <link rel="stylesheet" href="https://studiojessicasoares.com.br/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.21.8">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        /* RESET E ESTILOS GLOBAIS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* CSS Custom para ajustes específicos */
+        .elementor-sticky--active {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(10px);
         }
         
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        .text-center {
-            text-align: center;
-        }
-        
-        /* HEADER ORIGINAL */
-        .header-top {
-            background: #fff;
-            padding: 15px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .header-top .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo img {
-            height: 50px;
-        }
-        
-        .header-contact {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 14px;
-            color: #666;
-        }
-        
-        .contact-item i {
-            color: #e348a1;
-        }
-        
-        /* HERO SECTION IDÊNTICA */
-        .hero-section {
-            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
-            padding: 80px 0 60px;
+        .elementor-widget-wrap {
             position: relative;
         }
         
-        .hero-title {
-            font-size: 36px;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 20px;
-            line-height: 1.3;
+        /* Animações customizadas */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
-        .hero-subtitle {
-            font-size: 24px;
-            color: #666;
-            margin-bottom: 30px;
-            font-weight: 400;
+        .elementor-invisible {
+            visibility: hidden;
         }
         
-        .hero-highlight {
-            color: #e348a1;
-            font-weight: 700;
-        }
-        
-        .video-container {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .video-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
-        }
-        
-        /* BARRA DE PROGRESSO ORIGINAL */
-        .progress-container {
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-        
-        .progress-text {
-            text-align: center;
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        
-        .progress-bar {
-            height: 40px;
-            background: #f0f0f0;
-            border-radius: 20px;
-            overflow: hidden;
+        /* Ajustes de espaçamento específicos */
+        .elementor-section {
             position: relative;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #e348a1, #ff6b9c);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 14px;
-            position: relative;
-            width: 92%;
-        }
-        
-        /* PREÇO ORIGINAL */
-        .pricing-box {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            margin: 30px auto;
-            max-width: 500px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border: 2px solid #f8f8f8;
-        }
-        
-        .old-price {
-            color: #ff4444;
-            text-decoration: line-through;
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-        
-        .price-label {
-            color: #666;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        
-        .new-price {
-            font-size: 48px;
-            font-weight: 800;
-            color: #e348a1;
-            margin: 10px 0;
-        }
-        
-        .installments {
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        
-        /* BOTÃO ORIGINAL */
-        .cta-button {
-            display: block;
-            background: linear-gradient(135deg, #e348a1, #c93a8a);
-            color: white;
-            padding: 20px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(227, 72, 161, 0.3);
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(227, 72, 161, 0.4);
-        }
-        
-        /* SEÇÃO DE RESULTADOS ORIGINAL */
-        .results-section {
-            padding: 80px 0;
-            background: #fff;
-        }
-        
-        .section-title {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 50px;
-            color: #333;
-        }
-        
-        .section-title span {
-            color: #e348a1;
-        }
-        
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .result-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .result-image:hover {
-            transform: scale(1.05);
-        }
-        
-        /* SEÇÃO DE CONTEÚDO ORIGINAL */
-        .content-section {
-            padding: 80px 0;
-            background: #f9f9f9;
-        }
-        
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .content-column {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .content-column h3 {
-            color: #e348a1;
-            font-size: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-            font-weight: 700;
-        }
-        
-        .content-list {
-            list-style: none;
-        }
-        
-        .content-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-        }
-        
-        .content-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .content-list i {
-            color: #e348a1;
-            font-size: 16px;
-        }
-        
-        /* SEÇÃO DE BÔNUS ORIGINAL */
-        .bonus-section {
-            padding: 80px 0;
-            background: #fff;
-        }
-        
-        .bonus-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .bonus-card {
-            background: #fff;
-            padding: 40px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border-top: 4px solid #e348a1;
-            transition: transform 0.3s ease;
-        }
-        
-        .bonus-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .bonus-card img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
-        
-        .bonus-card h3 {
-            color: #e348a1;
-            font-size: 18px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        
-        .bonus-card h4 {
-            font-size: 16px;
-            margin-bottom: 15px;
-            color: #333;
-        }
-        
-        .bonus-card p {
-            font-size: 14px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        
-        .bonus-value {
-            background: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            font-weight: 700;
-            color: #e348a1;
-        }
-        
-        /* CERTIFICADO ORIGINAL */
-        .certificate-section {
-            padding: 80px 0;
-            background: #f9f9f9;
-        }
-        
-        .certificate-image {
-            max-width: 800px;
-            margin: 30px auto 0;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .certificate-image img {
-            width: 100%;
-            border-radius: 15px;
-        }
-        
-        /* DEPOIMENTOS ORIGINAL */
-        .testimonials-section {
-            padding: 80px 0;
-            background: #fff;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .testimonial-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        /* GARANTIA ORIGINAL */
-        .guarantee-section {
-            padding: 80px 0;
-            background: #f9f9f9;
-        }
-        
-        .guarantee-box {
-            background: #fff;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .guarantee-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-        
-        .guarantee-text h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .guarantee-text h2 span {
-            color: #e348a1;
-        }
-        
-        .guarantee-text p {
-            margin-bottom: 15px;
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .guarantee-image {
-            text-align: center;
-        }
-        
-        .guarantee-image img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        
-        /* FAQ ORIGINAL */
-        .faq-section {
-            padding: 80px 0;
-            background: #fff;
-        }
-        
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 20px;
-            background: #f9f9f9;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            font-size: 16px;
-        }
-        
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .faq-answer.active {
-            padding: 20px;
-            max-height: 200px;
-        }
-        
-        /* FOOTER ORIGINAL */
-        .footer-section {
-            background: #2c2c2c;
-            color: #fff;
-            padding: 60px 0 30px;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-links a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: #e348a1;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #444;
-            color: #999;
-            font-size: 14px;
-        }
-        
-        /* RESPONSIVIDADE */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 28px;
-            }
-            
-            .hero-subtitle {
-                font-size: 20px;
-            }
-            
-            .video-container iframe {
-                height: 300px;
-            }
-            
-            .results-grid,
-            .content-grid,
-            .bonus-grid,
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .guarantee-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .header-top .container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .header-contact {
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .results-grid,
-            .content-grid,
-            .bonus-grid,
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-title {
-                font-size: 24px;
-            }
-            
-            .hero-subtitle {
-                font-size: 18px;
-            }
-            
-            .new-price {
-                font-size: 36px;
-            }
-            
-            .cta-button {
-                padding: 15px 30px;
-                font-size: 16px;
-            }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- HEADER -->
-    <header class="header-top">
-        <div class="container">
-            <div class="logo">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/04/logo-jessica-soares.png" alt="Jessica Soares" loading="lazy">
-            </div>
-            <div class="header-contact">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>(11) 9999-9999</span>
+<body class="home page-template-default page page-id-102374 wp-embed-responsive elementor-default elementor-kit-102379 elementor-page elementor-page-102374">
+    <!-- Header Profissional -->
+    <header class="elementor-header" data-elementor-type="header">
+        <div class="elementor-section-wrap">
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-1a2b3c4d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1a2b3c4d" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-33 elementor-element elementor-element-5e6f7g8h" data-id="5e6f7g8h" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-9i0j1k2l elementor-widget elementor-widget-image" data-id="9i0j1k2l" data-element_type="widget" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/04/logo-jessica-soares.png" alt="Jessica Soares" class="elementor-animation-grow" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-33 elementor-element elementor-element-3m4n5o6p" data-id="3m4n5o6p" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-7q8r9s0t elementor-widget elementor-widget-nav-menu" data-id="7q8r9s0t" data-element_type="widget" data-widget_type="nav-menu.default">
+                                <div class="elementor-widget-container">
+                                    <nav class="elementor-nav-menu--main">
+                                        <ul class="elementor-nav-menu">
+                                            <li class="menu-item">
+                                                <a href="#curso" class="elementor-item">O Curso</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#resultados" class="elementor-item">Resultados</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#bonus" class="elementor-item">Bônus</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="#depoimentos" class="elementor-item">Depoimentos</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-33 elementor-element elementor-element-1u2v3w4x" data-id="1u2v3w4x" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-5y6z7a8b elementor-widget elementor-widget-html" data-id="5y6z7a8b" data-element_type="widget" data-widget_type="html.default">
+                                <div class="elementor-widget-container">
+                                    <div class="header-contact">
+                                        <div class="contact-item">
+                                            <i class="fas fa-phone"></i>
+                                            <span>(11) 9999-9999</span>
+                                        </div>
+                                        <div class="contact-item">
+                                            <i class="fas fa-envelope"></i>
+                                            <span>contato@jessicasoares.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>contato@jessicasoares.com</span>
-                </div>
-            </div>
+            </section>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-        <div class="container text-center">
-            <h1 class="hero-title">ALCANCE UM NOVO PATAMAR NA MICROPIGMENTAÇÃO</h1>
-            <h2 class="hero-subtitle">Aprenda o Melhor Método Para Fazer a Micropigmentação Perfeita com <span class="hero-highlight">Total Qualidade e Confiança!</span></h2>
-            <p>Você vai aprender <strong>Meu método exclusivo do absoluto zero,</strong> mesmo que seja iniciante e não tenha experiência!</p>
-            
-            <!-- VÍDEO -->
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/4-cPbeWHTOc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
-            </div>
-            
-            <!-- BARRA DE PROGRESSO -->
-            <div class="progress-container">
-                <div class="progress-text">Vagas Limitadas</div>
-                <div class="progress-bar">
-                    <div class="progress-fill">92% PREENCHIDO - ÚLTIMAS VAGAS!</div>
-                </div>
-            </div>
-            
-            <!-- PREÇO -->
-            <div class="pricing-box">
-                <div class="old-price">De R$ <del>497,00</del></div>
-                <div class="price-label"><strong>Por Apenas</strong></div>
-                <div class="new-price">R$137,00</div>
-                <div class="installments">ou até 12x 15,02 no cartão</div>
-                <a href="https://go.hotmart.com/E102198663T?ap=cb28" class="cta-button">QUERO GARANTIR MINHA VAGA</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- SEÇÃO DE RESULTADOS -->
-    <section class="results-section">
-        <div class="container">
-            <h2 class="section-title">Está pronta para <span>fazer trabalhos incríveis</span> como esses em poucos dias?</h2>
-            <div class="results-grid">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-4-300x278.jpg" alt="Resultado 1" class="result-image" loading="lazy">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-1-300x235.jpg" alt="Resultado 2" class="result-image" loading="lazy">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-5-300x257.jpg" alt="Resultado 3" class="result-image" loading="lazy">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-3-300x229.jpg" alt="Resultado 4" class="result-image" loading="lazy">
-            </div>
-        </div>
-    </section>
-    
-    <!-- SEÇÃO DE CONTEÚDO -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title">Veja o que você <span>vai aprender!</span></h2>
-            <div class="content-grid">
-                <div class="content-column">
-                    <h3>Módulo Básico</h3>
-                    <ul class="content-list">
-                        <li><i class="fas fa-check"></i> Microblading Fio a Fio</li>
-                        <li><i class="fas fa-check"></i> Retoque Microblading Fio a Fio</li>
-                        <li><i class="fas fa-check"></i> Micropigmentação Shadow Line</li>
-                        <li><i class="fas fa-check"></i> Retoque Micropigmentação Shadow Line</li>
-                        <li><i class="fas fa-check"></i> Micropigmentação Ombré Shadow</li>
-                        <li><i class="fas fa-check"></i> Retoque Micropigmentação Ombré Shadow</li>
-                        <li><i class="fas fa-check"></i> Micropigmentação Híbrida</li>
-                    </ul>
-                </div>
-                <div class="content-column">
-                    <h3>Módulo Técnico</h3>
-                    <ul class="content-list">
-                        <li><i class="fas fa-check"></i> Lista de Materiais</li>
-                        <li><i class="fas fa-check"></i> Tipos de Agulhas</li>
-                        <li><i class="fas fa-check"></i> Treino Trama Fios 1 e 2</li>
-                        <li><i class="fas fa-check"></i> Marcação do Design</li>
-                        <li><i class="fas fa-check"></i> Kit de Cuidados Pós Procedimento</li>
-                        <li><i class="fas fa-check"></i> Como Fazer o Teste Alérgico</li>
-                        <li><i class="fas fa-check"></i> Anatomia da Pele</li>
-                    </ul>
-                </div>
-                <div class="content-column">
-                    <h3>Módulo Avançado</h3>
-                    <ul class="content-list">
-                        <li><i class="fas fa-check"></i> Colorimetria Aplicada</li>
-                        <li><i class="fas fa-check"></i> Dermógrafos</li>
-                        <li><i class="fas fa-check"></i> Tipos de Lâmina</li>
-                        <li><i class="fas fa-check"></i> Preparo da Bancada</li>
-                        <li><i class="fas fa-check"></i> Ficha de Anamnese</li>
-                        <li><i class="fas fa-check"></i> Biossegurança</li>
-                        <li><i class="fas fa-check"></i> Gestão de Studio</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- SEÇÃO DE BÔNUS -->
-    <section class="bonus-section">
-        <div class="container">
-            <h2 class="section-title">Adquira hoje e receba <span>03 Bônus Especiais!</span></h2>
-            <div class="bonus-grid">
-                <div class="bonus-card">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/mentoria.png" alt="Mentoria" loading="lazy">
-                    <h3>Bônus 1</h3>
-                    <h4>Minha Mentoria Online</h4>
-                    <p>Você terá acesso direto comigo para ter suporte e tirar suas dúvidas.</p>
-                    <div class="bonus-value">Custa R$ 997,00</div>
-                </div>
-                <div class="bonus-card">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Marketing.png" alt="Marketing" loading="lazy">
-                    <h3>Bônus 2</h3>
-                    <h4>E-book Marketing para o seu Trabalho</h4>
-                    <p>Vou te ensinar como atrair Clientes</p>
-                    <div class="bonus-value">Custa R$ 57,00</div>
-                </div>
-                <div class="bonus-card">
-                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Studio.png" alt="Studio" loading="lazy">
-                    <h3>Bônus 3</h3>
-                    <h4>E-book Dicas de como montar o seu Studio</h4>
-                    <p>Aprenda como montar o seu próprio Studio</p>
-                    <div class="bonus-value">Custa R$ 97,00</div>
-                </div>
-            </div>
-            <div class="text-center" style="margin-top: 50px;">
-                <h3 style="color: #e348a1; font-size: 24px; margin-bottom: 20px;">SÃO MAIS R$ 1.200,00 REAIS EM BÔNUS, TOTALMENTE GRÁTIS!</h3>
-                <p style="font-size: 18px; color: #666;">Mas hoje vai ser seu de Bônus!</p>
-            </div>
-        </div>
-    </section>
-    
-    <!-- SEÇÃO DE CERTIFICADO -->
-    <section class="certificate-section">
-        <div class="container text-center">
-            <h2 class="section-title"><span>Certificado</span> de Conclusão</h2>
-            <p style="font-size: 18px; color: #666; max-width: 700px; margin: 0 auto 30px;">Após concluir o Curso Sobrancelhas Perfeitas, você terá acesso a um lindo certificado de conclusão que você poderá emitir direto da sua área do aluno.</p>
-            <div class="certificate-image">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Certificado-de-conclusao-4.png" alt="Certificado" loading="lazy">
-            </div>
-        </div>
-    </section>
-    
-    <!-- SEÇÃO DE DEPOIMENTOS -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">Será que realmente <span>funciona?</span></h2>
-            <p class="text-center" style="font-size: 18px; color: #666; margin-bottom: 50px;">Veja os depoimentos de nossas alunas!</p>
-            <div class="testimonials-grid">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-4.jpg" alt="Depoimento 1" class="testimonial-image" loading="lazy">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-5.jpg" alt="Depoimento 2" class="testimonial-image" loading="lazy">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/dempoimento_Micro-3.jpg" alt="Depoimento 3" class="testimonial-image" loading="lazy">
-            </div>
-        </div>
-    </section>
-    
-    <!-- SEÇÃO DE GARANTIA -->
-    <section class="guarantee-section">
-        <div class="container">
-            <div class="guarantee-box">
-                <div class="guarantee-content">
-                    <div class="guarantee-text">
-                        <h2>Ainda está <span>na dúvida?</span></h2>
-                        <p>Não tem dúvida, o Curso Micropigmentação Perfeita simplesmente funciona. A prova disso são as milhares de alunas com resultados incríveis e que tiveram suas vidas transformadas.</p>
-                        <p>Mas se você ainda tem alguma dúvida, vou permitir que você <strong>experimente por 7 dias</strong> e caso você não goste ou não veja nenhum resultado, basta me enviar um e-mail durante esse período que devolvo todo o valor que você pagou.</p>
-                        <p>O Objetivo é adicionar Valor Real à sua Vida, mostrando técnicas extremamente eficazes que levará você a ser uma Designer de Sucesso.</p>
-                        <p><strong>O único risco que você corre é de estar aqui e se tornar uma Expert em Micropigmentação e ter Sucesso. Simples assim!</strong></p>
+    <!-- Hero Section -->
+    <section class="hero-section elementor-section elementor-top-section elementor-element elementor-element-abc123 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="abc123" data-element_type="section" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-element elementor-element-def456" data-id="def456" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-ghi789 elementor-widget elementor-widget-heading" data-id="ghi789" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h1 class="elementor-heading-title elementor-size-xxl">ALCANCE UM NOVO PATAMAR NA <span style="color: #e348a1;">MICROPIGMENTAÇÃO</span></h1>
+                        </div>
                     </div>
-                    <div class="guarantee-image">
-                        <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/risco-zero-1-1.png" alt="Garantia de 7 dias" loading="lazy">
+                    <div class="elementor-element elementor-element-jkl012 elementor-widget elementor-widget-heading" data-id="jkl012" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-xl">Aprenda o Melhor Método Para Fazer a Micropigmentação Perfeita com <strong>Total Qualidade e Confiança!</strong></h2>
+                        </div>
+                    </div>
+                    <div class="elementor-element elementor-element-mno345 elementor-widget elementor-widget-text-editor" data-id="mno345" data-element_type="widget" data-widget_type="text-editor.default">
+                        <div class="elementor-widget-container">
+                            <p>Você vai aprender <strong>meu método exclusivo do absoluto zero,</strong> mesmo que seja iniciante e não tenha experiência!</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Vídeo -->
+                    <div class="elementor-element elementor-element-pqr678 elementor-widget elementor-widget-video" data-id="pqr678" data-element_type="widget" data-widget_type="video.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-wrapper">
+                                <div class="elementor-video">
+                                    <iframe src="https://www.youtube.com/embed/4-cPbeWHTOc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Barra de Progresso -->
+                    <div class="elementor-element elementor-element-stu901 elementor-widget elementor-widget-progress" data-id="stu901" data-element_type="widget" data-widget_type="progress.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-progress-wrapper" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="92" aria-valuetext="92%">
+                                <div class="elementor-progress-bar" data-max="100">
+                                    <div class="elementor-progress-text">92% PREENCHIDO - ÚLTIMAS VAGAS!</div>
+                                    <div class="elementor-progress-percentage">92%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Preço e CTA -->
+                    <div class="elementor-element elementor-element-vwx234 elementor-widget elementor-widget-price-table" data-id="vwx234" data-element_type="widget" data-widget_type="price-table.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-price-table">
+                                <div class="elementor-price-table__header">
+                                    <div class="elementor-price-table__original-price">De R$ <del>497,00</del></div>
+                                    <div class="elementor-price-table__price-label"><strong>Por Apenas</strong></div>
+                                    <div class="elementor-price-table__price">R$137,00</div>
+                                    <div class="elementor-price-table__period">ou 12x de R$ 15,02</div>
+                                </div>
+                                <div class="elementor-price-table__features-list">
+                                    <ul>
+                                        <li>✅ Acesso Vitalício</li>
+                                        <li>✅ Certificado Incluso</li>
+                                        <li>✅ Suporte Personalizado</li>
+                                    </ul>
+                                </div>
+                                <div class="elementor-price-table__footer">
+                                    <a href="https://go.hotmart.com/E102198663T?ap=cb28" class="elementor-price-table__button elementor-button elementor-size-xl">
+                                        QUERO GARANTIR MINHA VAGA
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- SEÇÃO FAQ -->
-    <section class="faq-section">
-        <div class="container">
-            <h1 class="section-title">PERGUNTAS FREQUENTES</h1>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Qual o formato do curso?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Você terá acesso a diversas vídeo aulas (passo a passo) + Bônus Especiais.</p>
+
+    <!-- Seção: Para Quem é Este Curso? -->
+    <section id="curso" class="elementor-section elementor-top-section elementor-element elementor-element-yza567 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="yza567" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-element elementor-element-bcd890" data-id="bcd890" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-efg123 elementor-widget elementor-widget-heading" data-id="efg123" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-xxl">Para <span style="color: #e348a1;">Quem é Este Curso?</span></h2>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Qual o valor do curso?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Atualmente o Curso Micropigmentação Perfeita está no valor promocional de apenas R$137,00</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Quais as formas de pagamento?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Você tem as opções de pagamento via cartões de crédito, boleto ou paypal.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Ainda não recebi o curso, o que fazer?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Verifique as caixas de spam/lixo/outros de seu e-mail, pois o link de acesso pode ser redirecionado para alguma dessas pastas.</p>
+            </div>
+        </div>
+        <div class="elementor-container elementor-column-gap-default">
+            <!-- Card 1 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-hij456" data-id="hij456" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-klm789 elementor-widget elementor-widget-image-box" data-id="klm789" data-element_type="widget" data-widget_type="image-box.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-image-box-wrapper">
+                                <div class="elementor-image-box-img">
+                                    <i class="fas fa-user-plus" style="font-size: 60px; color: #e348a1;"></i>
+                                </div>
+                                <div class="elementor-image-box-content">
+                                    <h3 class="elementor-image-box-title">Para Iniciantes</h3>
+                                    <p class="elementor-image-box-description">Que desejam aprender do zero e construir uma carreira sólida na micropigmentação.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Como vou receber o curso?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Assim que seu pedido for aprovado, o link de acesso ao curso será enviado ao seu e-mail, onde você terá acesso à sua área de membros do curso com login e senha pessoal.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-nop012" data-id="nop012" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-qrs345 elementor-widget elementor-widget-image-box" data-id="qrs345" data-element_type="widget" data-widget_type="image-box.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-image-box-wrapper">
+                                <div class="elementor-image-box-img">
+                                    <i class="fas fa-chart-line" style="font-size: 60px; color: #e348a1;"></i>
+                                </div>
+                                <div class="elementor-image-box-content">
+                                    <h3 class="elementor-image-box-title">Para Profissionais</h3>
+                                    <p class="elementor-image-box-description">Que querem se atualizar e aprender novas técnicas para aumentar sua renda.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Tenho que pagar alguma mensalidade?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Não, esse valor é único. Sem qualquer taxa ou mensalidade adicional.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Por quanto tempo terei acesso ao curso?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Você terá acesso ao curso por 1 ano e caso não se sinta satisfeito com sua compra, você pode fazer o cancelamento em até 7 dias.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-tuv678" data-id="tuv678" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-wxy901 elementor-widget elementor-widget-image-box" data-id="wxy901" data-element_type="widget" data-widget_type="image-box.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-image-box-wrapper">
+                                <div class="elementor-image-box-img">
+                                    <i class="fas fa-home" style="font-size: 60px; color: #e348a1;"></i>
+                                </div>
+                                <div class="elementor-image-box-content">
+                                    <h3 class="elementor-image-box-title">Para Empreendedoras</h3>
+                                    <p class="elementor-image-box-description">Que desejam montar seu próprio studio e ser donas do próprio negócio.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- SEÇÃO FINAL CTA -->
-    <section class="hero-section" style="padding: 60px 0;">
-        <div class="container text-center">
-            <!-- BARRA DE PROGRESSO -->
-            <div class="progress-container">
-                <div class="progress-text">Últimas Vagas Disponíveis</div>
-                <div class="progress-bar">
-                    <div class="progress-fill" style="width: 95%;">95% PREENCHIDO - CORRA!</div>
+
+    <!-- Seção Resultados -->
+    <section id="resultados" class="elementor-section elementor-top-section elementor-element elementor-element-zab234 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="zab234" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-element elementor-element-cde567" data-id="cde567" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-fgh890 elementor-widget elementor-widget-heading" data-id="fgh890" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-xxl">Está pronta para <span style="color: #e348a1;">fazer trabalhos incríveis</span> como esses em poucos dias?</h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- PREÇO -->
-            <div class="pricing-box">
-                <div class="old-price">De R$ <del>497,00</del></div>
-                <div class="price-label"><strong>Por Apenas</strong></div>
-                <div class="new-price">R$137,00</div>
-                <div class="installments">ou até 12x 15,02 no cartão</div>
-                <a href="https://go.hotmart.com/E102198663T?ap=cb28" class="cta-button">QUERO GARANTIR MINHA VAGA</a>
-            </div>
-            
-            <!-- MÉTODOS DE PAGAMENTO -->
-            <div style="margin-top: 40px;">
-                <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/04/pagamento-1.png" alt="Métodos de pagamento" style="max-width: 100%; border-radius: 10px;" loading="lazy">
+        </div>
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-element elementor-element-ijk123" data-id="ijk123" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-lmn456 elementor-widget elementor-widget-image-gallery" data-id="lmn456" data-element_type="widget" data-widget_type="image-gallery.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-image-gallery">
+                                <div class="elementor-grid">
+                                    <div class="elementor-grid-item">
+                                        <div class="elementor-image-gallery-item">
+                                            <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-4-300x278.jpg" alt="Resultado 1" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="elementor-grid-item">
+                                        <div class="elementor-image-gallery-item">
+                                            <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-1-300x235.jpg" alt="Resultado 2" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="elementor-grid-item">
+                                        <div class="elementor-image-gallery-item">
+                                            <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-5-300x257.jpg" alt="Resultado 3" loading="lazy">
+                                        </div>
+                                    </div>
+                                    <div class="elementor-grid-item">
+                                        <div class="elementor-image-gallery-item">
+                                            <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/micropigmentacao-3-300x229.jpg" alt="Resultado 4" loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    
-    <!-- RODAPÉ -->
-    <footer class="footer-section">
-        <div class="container">
-            <div class="footer-links">
-                <a href="https://micropigmentacaodesobrancelha.com/politicas-de-privacidade/">Políticas de Privacidade</a>
-                <a href="https://micropigmentacaodesobrancelha.com/termos-e-condicoes/">Termos de uso</a>
+
+    <!-- Seção Conteúdo do Curso -->
+    <section class="elementor-section elementor-top-section elementor-element elementor-element-opq789 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="opq789" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-element elementor-element-rst012" data-id="rst012" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-uvw345 elementor-widget elementor-widget-heading" data-id="uvw345" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-xxl">Veja o que você <span style="color: #e348a1;">vai aprender!</span></h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="copyright">
-                <p>Copyright © 2025 - <b>Curso Micropigmentação Perfeita 2025</b> - CNPJ: 52.832.200/0001-04 - Todos os Direitos Reservados.</p>
+        </div>
+        <div class="elementor-container elementor-column-gap-default">
+            <!-- Coluna 1 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-xyz678" data-id="xyz678" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-abc901 elementor-widget elementor-widget-accordion" data-id="abc901" data-element_type="widget" data-widget_type="accordion.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-accordion">
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Microblading Fio a Fio</span>
+                                    </div>
+                                </div>
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Retoque Microblading Fio a Fio</span>
+                                    </div>
+                                </div>
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Micropigmentação Shadow Line</span>
+                                    </div>
+                                </div>
+                                <!-- Adicione mais itens conforme necessário -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Coluna 2 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-def234" data-id="def234" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-ghi567 elementor-widget elementor-widget-accordion" data-id="ghi567" data-element_type="widget" data-widget_type="accordion.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-accordion">
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Kit de Cuidados Pós Procedimento</span>
+                                    </div>
+                                </div>
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Como Fazer o Teste Alérgico</span>
+                                    </div>
+                                </div>
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Anatomia da Pele</span>
+                                    </div>
+                                </div>
+                                <!-- Adicione mais itens conforme necessário -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Coluna 3 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-jkl890" data-id="jkl890" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-mno123 elementor-widget elementor-widget-accordion" data-id="mno123" data-element_type="widget" data-widget_type="accordion.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-accordion">
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Dermógrafos</span>
+                                    </div>
+                                </div>
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>Tipos de Lâmina</span>
+                                    </div>
+                                </div>
+                                <div class="elementor-accordion-item">
+                                    <div class="elementor-accordion-title">
+                                        <span class="elementor-accordion-icon">
+                                            <i class="fas fa-check"></i>
+                                        </span>
+                                        <span>O Ângulo Correto da Agulha</span>
+                                    </div>
+                                </div>
+                                <!-- Adicione mais itens conforme necessário -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Bônus -->
+    <section id="bonus" class="elementor-section elementor-top-section elementor-element elementor-element-pqr456 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="pqr456" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-element elementor-element-stu789" data-id="stu789" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-vwx012 elementor-widget elementor-widget-heading" data-id="vwx012" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-xxl">Adquira hoje e receba <span style="color: #e348a1;">03 Bônus Especiais!</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="elementor-container elementor-column-gap-default">
+            <!-- Bônus 1 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-yza345" data-id="yza345" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-bcd678 elementor-widget elementor-widget-image-box" data-id="bcd678" data-element_type="widget" data-widget_type="image-box.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-image-box-wrapper">
+                                <div class="elementor-image-box-img">
+                                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/mentoria.png" alt="Mentoria" loading="lazy">
+                                </div>
+                                <div class="elementor-image-box-content">
+                                    <h3 class="elementor-image-box-title">Bônus 1</h3>
+                                    <h4 class="elementor-image-box-subtitle">Minha Mentoria Online</h4>
+                                    <p class="elementor-image-box-description">Você terá acesso direto comigo para ter suporte e tirar suas dúvidas.</p>
+                                    <div class="elementor-image-box-price">
+                                        <strong>Custa R$ 997,00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bônus 2 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-efg901" data-id="efg901" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-hij234 elementor-widget elementor-widget-image-box" data-id="hij234" data-element_type="widget" data-widget_type="image-box.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-image-box-wrapper">
+                                <div class="elementor-image-box-img">
+                                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Marketing.png" alt="Marketing" loading="lazy">
+                                </div>
+                                <div class="elementor-image-box-content">
+                                    <h3 class="elementor-image-box-title">Bônus 2</h3>
+                                    <h4 class="elementor-image-box-subtitle">E-book Marketing para o seu Trabalho</h4>
+                                    <p class="elementor-image-box-description">Vou te ensinar como atrair Clientes</p>
+                                    <div class="elementor-image-box-price">
+                                        <strong>Custa R$ 57,00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Bônus 3 -->
+            <div class="elementor-column elementor-col-33 elementor-element elementor-element-klm567" data-id="klm567" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-nop890 elementor-widget elementor-widget-image-box" data-id="nop890" data-element_type="widget" data-widget_type="image-box.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-image-box-wrapper">
+                                <div class="elementor-image-box-img">
+                                    <img src="https://studiojessicasoares.com.br/wp-content/uploads/2021/08/Studio.png" alt="Studio" loading="lazy">
+                                </div>
+                                <div class="elementor-image-box-content">
+                                    <h3 class="elementor-image-box-title">Bônus 3</h3>
+                                    <h4 class="elementor-image-box-subtitle">E-book Dicas de como montar o seu Studio</h4>
+                                    <p class="elementor-image-box-description">Aprenda como montar o seu próprio Studio</p>
+                                    <div class="elementor-image-box-price">
+                                        <strong>Custa R$ 97,00</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Continue com as demais seções (Certificado, Depoimentos, Garantia, FAQ, CTA Final) seguindo o mesmo padrão -->
+
+    <!-- Footer -->
+    <footer class="elementor-section elementor-top-section elementor-element elementor-element-qrs123 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="qrs123" data-element_type="section">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-100 elementor-element elementor-element-tuv456" data-id="tuv456" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-wxy789 elementor-widget elementor-widget-text-editor" data-id="wxy789" data-element_type="widget" data-widget_type="text-editor.default">
+                        <div class="elementor-widget-container">
+                            <div class="footer-links">
+                                <a href="https://micropigmentacaodesobrancelha.com/politicas-de-privacidade/">Políticas de Privacidade</a>
+                                <a href="https://micropigmentacaodesobrancelha.com/termos-e-condicoes/">Termos de uso</a>
+                            </div>
+                            <div class="copyright">
+                                <p>Copyright © 2025 - <b>Curso Micropigmentação Perfeita 2025</b> - CNPJ: 52.832.200/0001-04 - Todos os Direitos Reservados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- Scripts do Elementor e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://studiojessicasoares.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.21.8"></script>
+    <script src="https://studiojessicasoares.com.br/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=3.21.8"></script>
+    <script src="https://studiojessicasoares.com.br/wp-content/themes/olympus/js/scripts.js?ver=1.0.0"></script>
+
     <script>
-        // Função para alternar FAQ
-        function toggleFAQ(element) {
-            const answer = element.nextElementSibling;
-            const icon = element.querySelector('i');
-            
-            if (answer.classList.contains('active')) {
-                answer.classList.remove('active');
-                icon.classList.remove('fa-chevron-up');
-                icon.classList.add('fa-chevron-down');
+        // Inicialização do Elementor
+        jQuery(window).on('elementor/frontend/init', function() {
+            elementorFrontend.hooks.addAction('frontend/element_ready/widget', function($scope) {
+                // Inicializar widgets do Elementor
+            });
+        });
+
+        // Sticky Header
+        jQuery(window).scroll(function() {
+            if (jQuery(this).scrollTop() > 100) {
+                jQuery('.elementor-header').addClass('elementor-sticky--active');
             } else {
-                answer.classList.add('active');
-                icon.classList.remove('fa-chevron-down');
-                icon.classList.add('fa-chevron-up');
+                jQuery('.elementor-header').removeClass('elementor-sticky--active');
             }
-        }
-        
-        // Inicializar FAQ
-        document.addEventListener('DOMContentLoaded', function() {
-            // Adicionar funcionalidade de smooth scroll para links âncora
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
+        });
+
+        // Smooth Scroll para links âncora
+        jQuery('a[href^="#"]').on('click', function(e) {
+            e.preventDefault();
+            var target = this.hash;
+            var $target = jQuery(target);
+            
+            jQuery('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 80
+            }, 900, 'swing', function() {
+                window.location.hash = target;
             });
         });
     </script>
