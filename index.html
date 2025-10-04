@@ -21,8 +21,7 @@
             --gradient-primary: linear-gradient(135deg, #E348A1 0%, #ff6b9c 100%);
             --gradient-dark: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             --gradient-light: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            --gradient-hero: linear-gradient(135deg, #8A2387 0%, #E94057 50%, #F27121 100%);
-            --gradient-subtle: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
         * {
@@ -60,31 +59,14 @@
         }
         
         .hero-section {
-            background: var(--gradient-hero);
+            background: 
+                linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><pattern id="circles" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23circles)"/></svg>');
             color: var(--white);
             padding: 150px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(138, 35, 135, 0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(242, 113, 33, 0.2) 0%, transparent 50%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2;
         }
         
         .bg-light {
@@ -95,8 +77,7 @@
             background-color: var(--light-bg);
             background-image: 
                 radial-gradient(circle at 5% 15%, rgba(227, 72, 161, 0.03) 0%, transparent 25%),
-                radial-gradient(circle at 95% 85%, rgba(227, 72, 161, 0.03) 0%, transparent 25%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g fill="none" fill-rule="evenodd"><g fill="%23E348A1" fill-opacity="0.03"><path d="M36,34 L36,56 L34,56 L34,34 L36,34 Z M26,34 L26,56 L24,56 L24,34 L26,34 Z M16,34 L16,56 L14,56 L14,34 L16,34 Z M6,34 L6,56 L4,56 L4,34 L6,34 Z M46,34 L46,56 L44,56 L44,34 L46,34 Z M56,34 L56,56 L54,56 L54,34 L56,34 Z"/></g></g></svg>');
+                radial-gradient(circle at 95% 85%, rgba(227, 72, 161, 0.03) 0%, transparent 25%);
         }
         
         .bg-accent {
@@ -105,7 +86,19 @@
         }
         
         .bg-subtle {
-            background: var(--gradient-subtle);
+            background: 
+                linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g fill="none" fill-rule="evenodd"><g fill="%23E348A1" fill-opacity="0.03"><path d="M36,34 L36,56 L34,56 L34,34 L36,34 Z M26,34 L26,56 L24,56 L24,34 L26,34 Z M16,34 L16,56 L14,56 L14,34 L16,34 Z M6,34 L6,56 L4,56 L4,34 L6,34 Z M46,34 L46,56 L44,56 L44,34 L46,34 Z M56,34 L56,56 L54,56 L54,34 L56,34 Z"/></g></g></svg>');
+        }
+        
+        .parallax-section {
+            background: 
+                linear-gradient(135deg, rgba(26, 26, 46, 0.85) 0%, rgba(22, 33, 62, 0.85) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
             color: var(--white);
         }
         
@@ -680,6 +673,10 @@
             .hero-section {
                 padding: 120px 0;
             }
+            
+            .parallax-section {
+                background-attachment: scroll;
+            }
         }
         
         @media (max-width: 768px) {
@@ -771,7 +768,7 @@
 </head>
 <body>
     <!-- Seção Hero -->
-    <section class="hero-section">
+    <section class="hero-section parallax">
         <div class="container">
             <div class="hero-content">
                 <h1 class="fade-in">DOMINE A ARTE DA <span class="highlight">MICROPIGMENTAÇÃO PERFEITA</span></h1>
@@ -919,7 +916,7 @@
     </section>
     
     <!-- Seção Depoimentos -->
-    <section class="bg-pattern">
+    <section class="parallax-section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title fade-in">HISTÓRIAS DE SUCESSO</h2>
